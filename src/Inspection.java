@@ -3,15 +3,32 @@
  */
 public class Inspection {
 
-    int idInspection;
+    private int idInspection;
+    private String description;
 
     public Inspection(){
 
     }
 
-    public Inspection(int idInspection){
+    public Inspection(int idInspection, String description){
 
+        this.idInspection = idInspection;
+        this.description = description;
+    }
+
+    public int getIdInspection() {
+        return idInspection;
+    }
+
+    public void setIdInspection(int idInspection) {
         this.idInspection = idInspection;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

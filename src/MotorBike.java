@@ -10,11 +10,11 @@ public class MotorBike extends Vehicle {
 
     @Override
     public void addVehicleFault() {
-
+// tutaj bedzie dodawanie usterki do listy
     }
 
     @Override
     public void addVehicleInspection() {
-
+// tutaj bedzie dodawanie przegladu do listy
     }
 }

@@ -6,9 +6,9 @@ import java.lang.String;
 
 public class Fault {
 
-    int idFault;
-    String description;
-    int cost;
+    private int idFault;
+    private String description;
+    private int cost;
 
     public Fault(){
 
@@ -22,4 +22,27 @@ public class Fault {
 
     }
 
+    public int getIdFault() {
+        return idFault;
+    }
+
+    public void setIdFault(int idFault) {
+        this.idFault = idFault;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
 }
