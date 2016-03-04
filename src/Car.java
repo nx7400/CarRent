@@ -7,6 +7,18 @@ public class Car extends Vehicle {
 
     }
 
+    public Car(String brand, String model, int idWorkShop, int idRental, int pricePerDay){
+
+        this.idVehicle = id+1;
+        this.brand = brand;
+        this.model = model;
+        this.idWorkShop = idWorkShop;
+        this.idRental = idRental;
+        this.pricePerDay = pricePerDay;
+        this.itRent = false;
+
+    }
+
     @Override
     public void show() {
 

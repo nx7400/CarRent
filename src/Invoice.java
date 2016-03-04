@@ -1,13 +1,15 @@
 /**
  * Created by Michał on 03.03.2016.
  */
+import java.util.List;
+
 public class Invoice {
 
     private int idInvoice;
     private int idCustomer;
     private int rentTime;
     private int totalCost;
-    Vehicle L; // to bedzie lista
+    private List<Vehicle> rentVehiclesList;
 
     public Invoice() {
 

@@ -2,9 +2,11 @@
  * Created by Michał on 03.03.2016.
  */
 import java.lang.String;
+import java.util.List;
 
 public abstract class Vehicle {
 
+    public static int id=0;
     protected int idVehicle;
     protected int idWorkShop;
     protected int idRental;
@@ -12,8 +14,8 @@ public abstract class Vehicle {
     protected String model;
     protected int pricePerDay;
     protected boolean itRent;
-    protected Fault A; // to bedzie lista
-    protected Inspection B; // to bedzie lista
+    protected List<Fault> faultsList;
+    protected List<Inspection> inspectionsList;
 
     public abstract void show();
     public abstract void addVehicleFault();
@@ -68,21 +70,6 @@ public abstract class Vehicle {
         this.itRent = itRent;
     }
 
-    public Fault getA() {
-        return A;
-    }
-
-    public void setA(Fault a) {
-        A = a;
-    }
-
-    public Inspection getB() {
-        return B;
-    }
-
-    public void setB(Inspection b) {
-        B = b;
-    }
 
     public int getPricePerDay() {
         return pricePerDay;

@@ -3,12 +3,15 @@
  */
 public abstract class Preson {
 
+    public static int id=0;
     protected String name;
     protected String lastName;
     protected String address;
     protected String email;
     protected int pesel;
-    protected int phoneNumber; // long ? String ?
+    protected String phoneNumber; // long ? String ?
+
+
 
     public String getName() {
         return name;
@@ -50,11 +53,11 @@ public abstract class Preson {
         this.pesel = pesel;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String  phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }
