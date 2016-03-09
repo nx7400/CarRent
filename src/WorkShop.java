@@ -7,9 +7,9 @@ public class WorkShop extends Building{
 
     }
 
-    public WorkShop(int idBuliding, String city, String address){
+    public WorkShop(String city, String address){
 
-        this.idBuilding = idBuliding;
+        this.idBuilding = id+1;
         this.city = city;
         this.address = address;
     }

@@ -28,12 +28,25 @@ public class Admin extends Employee {
         //odebranie informacji od administratora
         //wybranie warszatu
         //wybranie wypozyczalni
-        //podanie danych przegladu
+        //podanie danych
 
     }
 
     void addDealer(){
 
         //towrzenie nowego pracownika
+    }
+
+    void addWorkShop(){
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Dodawanie nowego warsztatu");
+        System.out.println("Podaj miasto");
+        String city = in.nextLine();
+        System.out.println("Poadaj adres");
+        String address = in.nextLine();
+
+        WorkShop A = new WorkShop(city,address);
+
     }
 }

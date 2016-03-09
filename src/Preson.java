@@ -9,7 +9,7 @@ public abstract class Preson {
     protected String address;
     protected String email;
     protected int pesel;
-    protected String phoneNumber; // long ? String ?
+    protected String phoneNumber;
 
 
 

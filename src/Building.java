@@ -5,6 +5,7 @@ import java.util.List;
 
 public abstract class Building {
 
+    public static int id=0;
     protected int idBuilding;
     protected String city;
     protected String address;

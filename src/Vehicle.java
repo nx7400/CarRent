@@ -1,6 +1,8 @@
 /**
  * Created by Michał on 03.03.2016.
  */
+import sun.util.locale.provider.FallbackLocaleProviderAdapter;
+
 import java.lang.String;
 import java.util.List;
 
@@ -18,8 +20,15 @@ public abstract class Vehicle {
     protected List<Inspection> inspectionsList;
 
     public abstract void show();
-    public abstract void addVehicleFault();
-    public abstract void addVehicleInspection();
+    public void addVehicleFault(){
+        Fault C = new Fault(1,"sjsjs",12);
+        faultsList.add(C);
+
+
+    }
+    public void addVehicleInspection(){
+        Inspection C = new Inspection(12,"test");
+    }
 
 
     public int getIdVehicle() {
@@ -69,7 +78,6 @@ public abstract class Vehicle {
     public void setItRent(boolean itRent) {
         this.itRent = itRent;
     }
-
 
     public int getPricePerDay() {
         return pricePerDay;
