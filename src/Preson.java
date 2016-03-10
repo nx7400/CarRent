@@ -8,7 +8,7 @@ public abstract class Preson {
     protected String lastName;
     protected String address;
     protected String email;
-    protected int pesel;
+    protected String pesel;
     protected String phoneNumber;
 
 
@@ -45,11 +45,11 @@ public abstract class Preson {
         this.email = email;
     }
 
-    public int getPesel() {
+    public String getPesel() {
         return pesel;
     }
 
-    public void setPesel(int pesel) {
+    public void setPesel(String pesel) {
         this.pesel = pesel;
     }
 

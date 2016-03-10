@@ -1,6 +1,7 @@
 /**
  * Created by Michał on 03.03.2016.
  */
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Building {
@@ -9,7 +10,7 @@ public abstract class Building {
     protected int idBuilding;
     protected String city;
     protected String address;
-    protected List<Vehicle> vehiclesList;
+    protected ArrayList<Vehicle> vehiclesList;
 
     public void addVehicle(Vehicle N){
         //dodawanie pojazdu do listy zarówno w wypozyczalni jak i warsztacie (czy to powinny byc osobne funkcje ?)

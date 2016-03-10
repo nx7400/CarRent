@@ -9,7 +9,7 @@ public class Dealer extends Employee {
 
     }
 
-    public Dealer(String name, String lastName, String address, String email, int pesel, String phoneNumber, int idRental){
+    public Dealer(String name, String lastName, String address, String email, String pesel, String phoneNumber, int idRental){
 
         this.idEmployee = id+1;
         this.name = name;

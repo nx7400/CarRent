@@ -4,6 +4,7 @@
 import sun.util.locale.provider.FallbackLocaleProviderAdapter;
 
 import java.lang.String;
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Vehicle {
@@ -16,10 +17,10 @@ public abstract class Vehicle {
     protected String model;
     protected int pricePerDay;
     protected boolean itRent;
-    protected List<Fault> faultsList;
-    protected List<Inspection> inspectionsList;
+    protected ArrayList<Fault> faultsList;
+    protected ArrayList<Inspection> inspectionsList;
 
-    public abstract void show();
+    public abstract String toString();
     public void addVehicleFault(){
         Fault C = new Fault(1,"sjsjs",12);
         faultsList.add(C);

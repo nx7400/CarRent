@@ -9,7 +9,7 @@ public class Admin extends Employee {
 
     }
 
-    public Admin(String name, String lastName, String address, String email, int pesel, String phoneNumber){
+    public Admin(String name, String lastName, String address, String email, String pesel, String phoneNumber){
 
         this.idEmployee = id+1;
         this.name = name;
@@ -18,7 +18,9 @@ public class Admin extends Employee {
         this.email = email;
         this.pesel = pesel;
         this.phoneNumber = phoneNumber;
+        loadLoginAndPassword();
     }
+
 
     void addVehicle(){
 

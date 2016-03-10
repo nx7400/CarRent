@@ -9,7 +9,7 @@ public class Mechanic extends Employee {
 
     }
 
-    public Mechanic(String name, String lastName, String address, String email, int pesel, String phoneNumber, int idWorkShop){
+    public Mechanic(String name, String lastName, String address, String email, String pesel, String phoneNumber, int idWorkShop){
 
         this.idEmployee = id+1;
         this.name = name;
