@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by Michał on 03.03.2016.
  */
-public abstract class Employee extends Preson {
+public abstract class Employee extends Person {
 
     protected int idEmployee;
     protected String login;

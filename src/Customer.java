@@ -3,9 +3,8 @@
  */
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class Customer extends Preson {
+public class Customer extends Person {
 
     public static int id=0;
     private int idCustomer;

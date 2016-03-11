@@ -15,7 +15,7 @@ public abstract class Vehicle {
     protected int idRental;
     protected String brand;
     protected String model;
-    protected int pricePerDay;
+    protected double pricePerDay;
     protected boolean itRent;
     protected ArrayList<Fault> faultsList;
     protected ArrayList<Inspection> inspectionsList;
@@ -80,7 +80,7 @@ public abstract class Vehicle {
         this.itRent = itRent;
     }
 
-    public int getPricePerDay() {
+    public double getPricePerDay() {
         return pricePerDay;
     }
 

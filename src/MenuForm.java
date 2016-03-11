@@ -9,10 +9,11 @@ import java.awt.event.ActionListener;
 public class MenuForm extends JFrame implements ActionListener{
     private JPanel panel1;
     private JButton buttonAddCustomer;
-    private JButton button2;
-    private JButton button3;
+    private JButton buttonAddDealer;
+    private JButton buttonAddMechanic;
     private JPanel panel2;
     private JLabel menuLabel;
+    private JTabbedPane tabbedPaneAdd;
 
     public MenuForm(){
 
@@ -25,6 +26,8 @@ public class MenuForm extends JFrame implements ActionListener{
         setContentPane(panel1);
 
         buttonAddCustomer.addActionListener(this);
+        buttonAddDealer.addActionListener(this);
+        buttonAddMechanic.addActionListener(this);
 
 
 
@@ -44,6 +47,14 @@ public class MenuForm extends JFrame implements ActionListener{
 
         if(source == buttonAddCustomer) {
             AddCustomerForm addCustomer = new AddCustomerForm();
+        }
+
+        if(source == buttonAddDealer) {
+            AddDealerForm addDealer = new AddDealerForm();
+        }
+
+        if(source == buttonAddMechanic) {
+            AddMechanicForm addMechanic = new AddMechanicForm();
         }
 
     }

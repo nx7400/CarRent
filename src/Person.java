@@ -1,7 +1,7 @@
 /**
  * Created by Michał on 03.03.2016.
  */
-public abstract class Preson {
+public abstract class Person {
 
     public static int id=0;
     protected String name;

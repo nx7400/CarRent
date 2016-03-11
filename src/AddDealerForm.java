@@ -3,26 +3,26 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Michał on 10.03.2016.
+ * Created by Michał on 11.03.2016.
  */
-
-public class AddCustomerForm extends JFrame implements ActionListener {
+public class AddDealerForm extends JFrame implements ActionListener {
+    private JPanel panel1;
     private JTextField textFieldName;
-    private JTextField textFieldPhoneNumber;
     private JTextField textFieldLastName;
     private JTextField textFieldAdress;
     private JTextField textFieldEmail;
+    private JTextField textFieldPhoneNumber;
     private JTextField textFieldPesel;
-    private JPanel panel1;
     private JButton buttonConfirm;
 
-    public AddCustomerForm(){
+
+    public AddDealerForm() {
 
         super("Dodaj Klienta");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
-        setSize(640,480);
-        setLocation(50,50);
+        setSize(640, 480);
+        setLocation(50, 50);
         setContentPane(panel1);
 
         buttonConfirm.addActionListener(this);
@@ -36,7 +36,7 @@ public class AddCustomerForm extends JFrame implements ActionListener {
 
         Object source = e.getSource();
 
-        if(source == buttonConfirm){
+        if (source == buttonConfirm) {
 
             String name = textFieldName.getText();
             String lastName = textFieldLastName.getText();
@@ -45,10 +45,11 @@ public class AddCustomerForm extends JFrame implements ActionListener {
             String pesel = textFieldPesel.getText();
             String phoneNumber = textFieldPhoneNumber.getText();
 
-            Customer C1 = new Customer(name,lastName,address,email,pesel,phoneNumber);
+            Dealer D1 = new Dealer(name, lastName, address, email, pesel, phoneNumber, 1); //dodac wybor wypozyczlani
 
 
         }
 
     }
+
 }

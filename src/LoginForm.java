@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 /**
  * Created by Michał on 10.03.2016.
  */
-public class LoginForm extends JFrame {
+public class LoginForm extends JFrame implements ActionListener{
     private JTextField textField1;
     private JPanel mainPanel;
     private JButton buttonSignIn;
@@ -21,6 +21,8 @@ public class LoginForm extends JFrame {
         setSize(640,480);
         setLocation(50,50);
         setContentPane(mainPanel);
+
+        buttonSignIn.addActionListener(this);
 
 
     }
@@ -56,11 +58,14 @@ public class LoginForm extends JFrame {
     }
 
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
 
+        Object source = e.getSource();
 
+        if(source == buttonSignIn){
 
+        }
 
-
-
-
+    }
 }
