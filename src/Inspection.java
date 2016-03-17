@@ -5,6 +5,7 @@ public class Inspection {
 
     private int idInspection;
     private String description;
+    // boolean wazny lub nie ???
 
     public Inspection(){
 

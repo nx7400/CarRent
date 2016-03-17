@@ -14,6 +14,7 @@ public class AddDealerForm extends JFrame implements ActionListener {
     private JTextField textFieldPhoneNumber;
     private JTextField textFieldPesel;
     private JButton buttonConfirm;
+    private JButton buttonCancel;
 
 
     public AddDealerForm() {
@@ -26,6 +27,7 @@ public class AddDealerForm extends JFrame implements ActionListener {
         setContentPane(panel1);
 
         buttonConfirm.addActionListener(this);
+        buttonCancel.addActionListener(this);
 
 
     }
@@ -48,6 +50,10 @@ public class AddDealerForm extends JFrame implements ActionListener {
             Dealer D1 = new Dealer(name, lastName, address, email, pesel, phoneNumber, 1); //dodac wybor wypozyczlani
 
 
+        }
+
+        if(source == buttonCancel){
+            dispose();
         }
 
     }

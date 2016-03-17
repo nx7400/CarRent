@@ -14,10 +14,22 @@ public class MenuForm extends JFrame implements ActionListener{
     private JPanel panel2;
     private JLabel menuLabel;
     private JTabbedPane tabbedPaneAdd;
+    private JButton buttonAddWorkShop;
+    private JButton buttonRemoveCustomer;
+    private JButton buttonRemoveDealer;
+    private JButton buttonRemoveMechanic;
+    private JButton buttonRemoveWorkShop;
+    private JButton buttonAddVehicle;
+    private JButton buttonAddRental;
+    private JButton buttonRemoveRental;
+    private JButton buttonRemoveVehicle;
+    private JButton buttonChangeToDealer;
+    private JButton buttonChangeToMechanic;
+
 
     public MenuForm(){
 
-        super("Hello World");
+        super("Menu");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setSize(640,480);
@@ -28,13 +40,18 @@ public class MenuForm extends JFrame implements ActionListener{
         buttonAddCustomer.addActionListener(this);
         buttonAddDealer.addActionListener(this);
         buttonAddMechanic.addActionListener(this);
+        buttonAddWorkShop.addActionListener(this);
+        buttonAddRental.addActionListener(this);
+        buttonAddVehicle.addActionListener(this);
+
+        buttonChangeToDealer.addActionListener(this);
+        buttonChangeToMechanic.addActionListener(this);
+
 
 
 
 
     }
-
-
 
 
     private void createUIComponents() {
@@ -55,6 +72,23 @@ public class MenuForm extends JFrame implements ActionListener{
 
         if(source == buttonAddMechanic) {
             AddMechanicForm addMechanic = new AddMechanicForm();
+        }
+
+        if(source == buttonAddWorkShop) {
+            AddWorkShopForm addWorkShop = new AddWorkShopForm();
+        }
+
+        if(source == buttonAddRental) {
+            AddRentalForm addRental = new AddRentalForm();
+        }
+
+        if(source == buttonChangeToDealer){
+
+            DealerMenu dealerMenu = new DealerMenu();
+        }
+
+        if(source == buttonChangeToMechanic){
+            MechanicMenu mechanicMenu = new MechanicMenu();
         }
 
     }

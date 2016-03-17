@@ -15,6 +15,7 @@ public class AddCustomerForm extends JFrame implements ActionListener {
     private JTextField textFieldPesel;
     private JPanel panel1;
     private JButton buttonConfirm;
+    private JButton buttonCancel;
 
     public AddCustomerForm(){
 
@@ -26,6 +27,7 @@ public class AddCustomerForm extends JFrame implements ActionListener {
         setContentPane(panel1);
 
         buttonConfirm.addActionListener(this);
+        buttonCancel.addActionListener(this);
 
 
     }
@@ -48,7 +50,14 @@ public class AddCustomerForm extends JFrame implements ActionListener {
             Customer C1 = new Customer(name,lastName,address,email,pesel,phoneNumber);
 
 
+
         }
+
+        if(source == buttonCancel){
+            dispose();
+        }
+
+
 
     }
 }

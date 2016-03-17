@@ -20,10 +20,15 @@ public class Invoice {
         this.idInvoice = idInvoice;
         this.idCustomer = idCustomer;
         this.rentTime = rentTime;
+        //dodawanie samochodu do listy.
 
     }
 
     public void coutTotalCost(){
+
+    }
+
+    public void addCarToInvoice(){ //dodawanie samochodu do istniejacej faktury.
 
     }
 

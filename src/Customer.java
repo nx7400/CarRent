@@ -23,7 +23,12 @@ public class Customer extends Person {
         this.email = email;
         this.pesel = pesel;
         this.phoneNumber = phoneNumber;
+        // tworzenie listy faktur
 
+    }
+
+    public void addInvoiceToCustomer(){
+        //dodawanie kolejnej faktur do listy faktur klienta
     }
 
     public int getIdCustomer() {

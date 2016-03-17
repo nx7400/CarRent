@@ -3,16 +3,19 @@ import org.mindrot.jbcrypt.BCrypt;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 
 /**
  * Created by Michał on 10.03.2016.
  */
-public class LoginForm extends JFrame implements ActionListener{
+public class LoginForm extends JFrame{
     private JTextField textField1;
     private JPanel mainPanel;
     private JButton buttonSignIn;
     private JPasswordField passwordField1;
+    private JPanel logoPanel;
     private JFrame dialogWinodow;
+
 
     public LoginForm(){
         super("Zaloguj się");
@@ -21,8 +24,11 @@ public class LoginForm extends JFrame implements ActionListener{
         setSize(640,480);
         setLocation(50,50);
         setContentPane(mainPanel);
+        logoPanel = new LogoPanel();
+        add(logoPanel);
+        //pack();
 
-        buttonSignIn.addActionListener(this);
+
 
 
     }
@@ -52,20 +58,8 @@ public class LoginForm extends JFrame implements ActionListener{
             }
         });
 
-
-
-
     }
 
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
 
-        Object source = e.getSource();
-
-        if(source == buttonSignIn){
-
-        }
-
-    }
 }

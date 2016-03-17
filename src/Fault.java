@@ -9,6 +9,7 @@ public class Fault {
     private int idFault;
     private String description;
     private int cost;
+    // bolean naprawiona lub nie ???
 
     public Fault(){
 

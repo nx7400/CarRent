@@ -19,8 +19,11 @@ public abstract class Vehicle {
     protected boolean itRent;
     protected ArrayList<Fault> faultsList;
     protected ArrayList<Inspection> inspectionsList;
+    //pole bool czy jest aktywny (przeglad i brak usterek)
+
 
     public abstract String toString();
+
     public void addVehicleFault(){
         Fault C = new Fault(1,"sjsjs",12);
         faultsList.add(C);
