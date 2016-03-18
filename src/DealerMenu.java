@@ -1,12 +1,15 @@
+import javax.naming.event.ObjectChangeListener;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by Michał on 17.03.2016.
  */
-public class DealerMenu extends JFrame {
-    private JButton dodajKlientaButton;
-    private JButton dodajSamochódDoKlientaButton;
-    private JButton drukujFaktureButton;
+public class DealerMenu extends JFrame implements ActionListener {
+    private JButton buttonAddCustomer;
+    private JButton buttonAddVehicleToCustomer;
+    private JButton buttonPrintInvoice;
     private JPanel panel1;
 
     public DealerMenu(){
@@ -18,7 +21,21 @@ public class DealerMenu extends JFrame {
         setLocation(50,50);
 
         setContentPane(panel1);
+
+        buttonAddCustomer.addActionListener(this);
+
     }
 
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        Object source = e.getSource();
+
+        if(source == buttonAddCustomer){
+            AddCustomerForm addCustomer = new AddCustomerForm();
+            dispose();
+        }
+
+    }
 }

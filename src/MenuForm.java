@@ -82,6 +82,10 @@ public class MenuForm extends JFrame implements ActionListener{
             AddRentalForm addRental = new AddRentalForm();
         }
 
+        if(source == buttonAddVehicle) {
+            AddVehicleForm addVehicle = new AddVehicleForm();
+        }
+
         if(source == buttonChangeToDealer){
 
             DealerMenu dealerMenu = new DealerMenu();

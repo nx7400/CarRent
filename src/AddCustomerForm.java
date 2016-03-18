@@ -16,6 +16,7 @@ public class AddCustomerForm extends JFrame implements ActionListener {
     private JPanel panel1;
     private JButton buttonConfirm;
     private JButton buttonCancel;
+    private JFrame dialogWindow;
 
     public AddCustomerForm(){
 
@@ -48,6 +49,23 @@ public class AddCustomerForm extends JFrame implements ActionListener {
             String phoneNumber = textFieldPhoneNumber.getText();
 
             Customer C1 = new Customer(name,lastName,address,email,pesel,phoneNumber);
+
+            dispose();
+
+            Object[] options = {"Dodaj pojazd do klienta","Wróć do menu"};
+
+            int c = JOptionPane.showOptionDialog(dialogWindow,"Co chcesz zrobić dalej?","Wybierz opcje",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);
+
+            System.out.println(c);
+
+            switch (c){
+                case 0:
+                    // formularz wyboru pojazdu
+                    dispose();
+                case 1:
+                    DealerMenu dealerMenu = new DealerMenu();
+
+            }
 
 
 
