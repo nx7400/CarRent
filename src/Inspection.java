@@ -3,6 +3,7 @@
  */
 public class Inspection {
 
+    public static int id = 0;
     private int idInspection;
     private String description;
     // boolean wazny lub nie ???
@@ -13,7 +14,8 @@ public class Inspection {
 
     public Inspection(int idInspection, String description){
 
-        this.idInspection = idInspection;
+        id++;
+        this.idInspection = id;
         this.description = description;
     }
 

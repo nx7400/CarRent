@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Invoice {
 
+    public static int id = 0;
     private int idInvoice;
     private int idCustomer;
     private int rentTime;
@@ -15,9 +16,10 @@ public class Invoice {
 
     }
 
-    public Invoice(int idInvoice, int idCustomer, int rentTime){
+    public Invoice(int idCustomer, int rentTime){
 
-        this.idInvoice = idInvoice;
+        id++;
+        this.idInvoice = id;
         this.idCustomer = idCustomer;
         this.rentTime = rentTime;
         //dodawanie samochodu do listy.

@@ -9,7 +9,8 @@ public class WorkShop extends Building{
 
     public WorkShop(String city, String address){
 
-        this.idBuilding = id+1;
+        id++;
+        this.idBuilding = id;
         this.city = city;
         this.address = address;
     }

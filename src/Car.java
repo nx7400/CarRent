@@ -11,7 +11,8 @@ public class Car extends Vehicle {
 
     public Car(String brand, String model, int idWorkShop, int idRental, double pricePerDay) {
 
-        this.idVehicle = id + 1;
+        id++;
+        this.idVehicle = id;
         this.brand = brand;
         this.model = model;
         this.idWorkShop = idWorkShop;

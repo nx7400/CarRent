@@ -11,7 +11,8 @@ public class MotorBike extends Vehicle {
 
     public MotorBike(String brand, String model, int idWorkShop, int idRental, double pricePerDay){
 
-        this.idVehicle = id + 1;
+        id++;
+        this.idVehicle = id;
         this.brand = brand;
         this.model = model;
         this.idWorkShop = idWorkShop;

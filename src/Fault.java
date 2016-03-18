@@ -6,6 +6,7 @@ import java.lang.String;
 
 public class Fault {
 
+    public static int id = 0;
     private int idFault;
     private String description;
     private int cost;
@@ -15,9 +16,10 @@ public class Fault {
 
     }
 
-    public Fault(int idFault, String description, int cost){
+    public Fault(String description, int cost){
 
-        this.idFault = idFault;
+        id++;
+        this.idFault = id;
         this.description = description;
         this.cost = cost;
 

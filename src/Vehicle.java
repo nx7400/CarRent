@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class Vehicle {
 
-    public static int id=0;
+    public static int id = 0;
     protected int idVehicle;
     protected int idWorkShop;
     protected int idRental;
@@ -25,7 +25,7 @@ public abstract class Vehicle {
     public abstract String toString();
 
     public void addVehicleFault(){
-        Fault C = new Fault(1,"sjsjs",12);
+        Fault C = new Fault("sjsjs",12);
         faultsList.add(C);
 
 

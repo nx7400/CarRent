@@ -11,7 +11,8 @@ public class Mechanic extends Employee {
 
     public Mechanic(String name, String lastName, String address, String email, String pesel, String phoneNumber, int idWorkShop){
 
-        this.idEmployee = id+1;
+        id++;
+        this.idEmployee = id;
         this.name = name;
         this.lastName = lastName;
         this.address = address;

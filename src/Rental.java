@@ -9,7 +9,8 @@ public class Rental extends Building {
 
     public Rental(String city, String address){
 
-        this.idBuilding = id+1;
+        id++;
+        this.idBuilding = id;
         this.city = city;
         this.address =address;
     }
