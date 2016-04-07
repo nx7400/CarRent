@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public abstract class Employee extends Person {
 
+    public static int id = 0;
     protected int idEmployee;
     protected String login;
     protected String password;

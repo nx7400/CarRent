@@ -3,7 +3,6 @@
  */
 public abstract class Person {
 
-    public static int id = 0;
     protected String name;
     protected String lastName;
     protected String address;

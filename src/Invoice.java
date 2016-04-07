@@ -21,7 +21,7 @@ public class Invoice {
         id++;
         this.idInvoice = id;
         this.idCustomer = idCustomer;
-        this.rentTime = rentTime;
+        this.rentTime = rentTime; // in days
         //dodawanie samochodu do listy.
 
     }

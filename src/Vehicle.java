@@ -25,8 +25,6 @@ public abstract class Vehicle {
     public abstract String toString();
 
     public void addVehicleFault(){
-        Fault C = new Fault("sjsjs",12);
-        faultsList.add(C);
 
 
     }

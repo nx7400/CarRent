@@ -5,6 +5,7 @@ public class Inspection {
 
     public static int id = 0;
     private int idInspection;
+    private int idVehicle;
     private String description;
     // boolean wazny lub nie ???
 
@@ -12,10 +13,11 @@ public class Inspection {
 
     }
 
-    public Inspection(int idInspection, String description){
+    public Inspection(int idVehicle, String description){
 
         id++;
         this.idInspection = id;
+        this.idVehicle = idVehicle;
         this.description = description;
     }
 

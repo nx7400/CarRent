@@ -8,6 +8,7 @@ public class Fault {
 
     public static int id = 0;
     private int idFault;
+    private int idVehicle;
     private String description;
     private int cost;
     // bolean naprawiona lub nie ???
@@ -16,10 +17,11 @@ public class Fault {
 
     }
 
-    public Fault(String description, int cost){
+    public Fault(int idVehicle, String description, int cost){
 
         id++;
         this.idFault = id;
+        this.idVehicle = idVehicle;
         this.description = description;
         this.cost = cost;
 
