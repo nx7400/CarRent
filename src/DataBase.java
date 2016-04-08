@@ -91,14 +91,15 @@ public class DataBase {
 
         try{
             PreparedStatement prepStat = conn.prepareStatement("INSERT INTO Dealer VALUES (NULL,?,?,?,?,?,?,?,?,?)");
-            prepStat.setString(1,D.login);
-            prepStat.setString(2,D.password);
-            prepStat.setString(3,D.name);
-            prepStat.setString(4,D.lastName);
-            prepStat.setString(5,D.address);
-            prepStat.setString(6,D.email);
-            prepStat.setString(7,D.pesel);
-            prepStat.setString(8,D.phoneNumber);
+            prepStat.setInt(1,D.getIdRental());
+            prepStat.setString(2,D.login);
+            prepStat.setString(3,D.password);
+            prepStat.setString(4,D.name);
+            prepStat.setString(5,D.lastName);
+            prepStat.setString(6,D.address);
+            prepStat.setString(7,D.email);
+            prepStat.setString(8,D.pesel);
+            prepStat.setString(9,D.phoneNumber);
             prepStat.execute();
         } catch (SQLException e){
             System.err.println("Blad przy wstawianiu sprzedawcy");
@@ -113,14 +114,15 @@ public class DataBase {
 
         try{
             PreparedStatement prepStat = conn.prepareStatement("INSERT INTO Mechanic VALUES (NULL,?,?,?,?,?,?,?,?,?)");
-            prepStat.setString(1,M.login);
-            prepStat.setString(2,M.password);
-            prepStat.setString(3,M.name);
-            prepStat.setString(4,M.lastName);
-            prepStat.setString(5,M.address);
-            prepStat.setString(6,M.email);
-            prepStat.setString(7,M.pesel);
-            prepStat.setString(8,M.phoneNumber);
+            prepStat.setInt(1,M.getIdWorkShop());
+            prepStat.setString(2,M.login);
+            prepStat.setString(3,M.password);
+            prepStat.setString(4,M.name);
+            prepStat.setString(5,M.lastName);
+            prepStat.setString(6,M.address);
+            prepStat.setString(7,M.email);
+            prepStat.setString(8,M.pesel);
+            prepStat.setString(9,M.phoneNumber);
             prepStat.execute();
         } catch (SQLException e){
             System.err.println("Blad przy wstawianiu mechanika");
@@ -243,9 +245,9 @@ public class DataBase {
         return true;
     }
 
-    public List<Admin> selectAdmin(){
+    public List<Employee> selectAdmin(){
 
-        List<Admin> adminList = new LinkedList<Admin>();
+        List<Employee> adminList = new LinkedList<Employee>();
 
         try{
             ResultSet result = stat.executeQuery("SELECT * FROM Admin");
@@ -261,7 +263,7 @@ public class DataBase {
                 email = result.getString("Email");
                 pesel = result.getString("Pesel");
                 phonenumber = result.getString("PhoneNumber");
-                adminList.add(new Admin(idAdmin,login,password,name,lastName,address,email,pesel,phonenumber));
+                adminList.add(new Admin(idAdmin, login, password, name, lastName, address, email, pesel, phonenumber));
 
             }
         } catch (SQLException e){
@@ -275,21 +277,124 @@ public class DataBase {
         return adminList;
     }
 
-    public int getNumberofDealer(){
-        int numberOfDealer = 0;
+    public List<Employee> selectMechanic(){
+
+        List<Employee> mechanicList = new LinkedList<Employee>();
 
         try{
-            ResultSet result = stat.executeQuery("SELECT IDDealer, COUNT(IDDealer) AS NumberOfDealer FROM Dealer");
+            ResultSet result = stat.executeQuery("SELECT * FROM Mechanic");
+            int idMechanic, idWorkShop;
+            String login, password, name, lastName, address, email, pesel, phonenumber;
+            while(result.next()){
+                idMechanic = result.getInt("IDMechanic");
+                idWorkShop = result.getInt("IDWorkShop");
+                login = result.getString("Login");
+                password = result.getString("Password");
+                name = result.getString("Name");
+                lastName = result.getString("LastName");
+                address = result.getString("Address");
+                email = result.getString("Email");
+                pesel = result.getString("Pesel");
+                phonenumber = result.getString("PhoneNumber");
+                mechanicList.add(new Mechanic(idMechanic, login, password, name, lastName, address, email, pesel, phonenumber, idWorkShop));
+
+            }
+        } catch (SQLException e){
+            System.err.println("Blad przy wczytawaniu Adminow");
+            e.printStackTrace();
+            return null;
+
+        }
+
+        System.out.println("Poprawne wczatanie mechanikow");
+        return mechanicList;
+    }
+
+    public List<Employee> selectDealer(){
+
+        List<Employee> dealerList = new LinkedList<Employee>();
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT * FROM Dealer");
+            int idAdmin, idRental;
+            String login, password, name, lastName, address, email, pesel, phonenumber;
+            while(result.next()){
+                idAdmin = result.getInt("IDDealer");
+                idRental = result.getInt("IDRental");
+                login = result.getString("Login");
+                password = result.getString("Password");
+                name = result.getString("Name");
+                lastName = result.getString("LastName");
+                address = result.getString("Address");
+                email = result.getString("Email");
+                pesel = result.getString("Pesel");
+                phonenumber = result.getString("PhoneNumber");
+                dealerList.add(new Dealer(idAdmin, login, password, name, lastName, address, email, pesel, phonenumber, idRental));
+
+            }
+        } catch (SQLException e){
+            System.err.println("Blad przy wczytawaniu Adminow");
+            e.printStackTrace();
+            return null;
+
+        }
+
+        System.out.println("Poprawne wczatanie adminow");
+        return dealerList;
+    }
+
+
+    public int getNumberofDealers(){
+        int numberOfDealers = 0;
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT IDDealer, COUNT(IDDealer) AS NumberOfDealers FROM Dealer");
 
             while(result.next()){
-                numberOfDealer = result.getInt("NumberOfDealer");
+                numberOfDealers = result.getInt("NumberOfDealers");
             }
         } catch (SQLException e) {
             System.err.println("Blad przy pobieraniu liczby sprzedawcow");
             e.printStackTrace();
         }
 
-        return numberOfDealer;
+        return numberOfDealers;
+
+    }
+
+    public int getNumberofAdmins(){
+        int numberOfAdmins = 0;
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT IDAdmin, COUNT(IDAdmin) AS NumberOfAdmins FROM Admin");
+
+            while(result.next()){
+                numberOfAdmins = result.getInt("NumberOfAdmins");
+            }
+        } catch (SQLException e) {
+            System.err.println("Blad przy pobieraniu liczby adminow");
+            e.printStackTrace();
+        }
+
+        return numberOfAdmins;
+
+    }
+
+    public int getNumberofMechanics(){
+        int numberOfMechanics = 0;
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT IDMechanic, COUNT(IDMechanic) AS NumberOfMechanics FROM Mechanic");
+
+            while(result.next()){
+                numberOfMechanics = result.getInt("NumberOfMechanics");
+            }
+        } catch (SQLException e) {
+            System.err.println("Blad przy pobieraniu liczby mechanikow");
+            e.printStackTrace();
+        }
+
+        return numberOfMechanics;
 
     }
 

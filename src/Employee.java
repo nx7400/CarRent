@@ -14,11 +14,11 @@ public abstract class Employee extends Person {
     protected String login;
     protected String password;
 
-    protected static String createLogin(String name, String lastName){
-        String login1 = name.substring(0,2);
-        String login2 = lastName.substring(0,2);
+    protected static String createLogin(String name, String lastName, int idEmployee){
+        String login1 = name.substring(0,3);
+        String login2 = lastName.substring(0,3);
 
-        return login1+login2;
+        return login1+login2+idEmployee;
     }
 
     protected static String hashPassword(String password){

@@ -15,6 +15,7 @@ public class AddMechanicForm extends JFrame implements ActionListener {
     private JTextField textFieldPesel;
     private JButton buttonConfirm;
     private JButton buttonCancel;
+    private JPasswordField passwordField;
 
     public AddMechanicForm(){
 
@@ -39,12 +40,15 @@ public class AddMechanicForm extends JFrame implements ActionListener {
 
             String name = textFieldName.getText();
             String lastName = textFieldLastName.getText();
+            String password = passwordField.getText();
             String address = textFieldAdress.getText();
             String email = textFieldEmail.getText();
             String pesel = textFieldPesel.getText();
             String phoneNumber = textFieldPhoneNumber.getText();
 
-           // Mechanic M1 = new Mechanic(name, lastName, address, email, pesel, phoneNumber, 1); // dodac wybieranie warsztatu
+            Mechanic M = new Mechanic(1, password, name, lastName, address, email, pesel, phoneNumber); //dodac wybor wypozyczlani
+            DataBase B = new DataBase();
+            B.insertMechanic(M);
         }
 
         if(source ==  buttonCancel){

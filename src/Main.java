@@ -21,22 +21,21 @@ public class Main {
             System.err.println();
         }
 
-        DataBase B = new DataBase();
-        B.insertAdmin(new Admin(1,"rent","michal","koko","sadasdsa","misia","sdsaad","dsadsn"));
-
-        Customer C = new Customer("Grazyna","Waleczna","Krakow Urzednicza 2","grazyna94@gmail.com","94110912121","987456098");
-
-        if(B.insertCustomer(C)){
-            System.out.println("Udane wlozenie klienta");
-        } else{
-            System.out.println("Blad przy wkladaniu klienta");
-        }
 
 
-        List<Admin> adminList = B.selectAdmin();
+//        Customer C = new Customer("Grazyna","Waleczna","Krakow Urzednicza 2","grazyna94@gmail.com","94110912121","987456098");
+//
+//        if(B.insertCustomer(C)){
+//            System.out.println("Udane wlozenie klienta");
+//        } else{
+//            System.out.println("Blad przy wkladaniu klienta");
+//        }
+
+
+
 
         LoginForm L = new LoginForm();
-        L.loginAndPasswordTest(adminList);
+
 
 
 

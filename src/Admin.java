@@ -11,9 +11,10 @@ public class Admin extends Employee {
 
     public Admin(int id, String password, String name, String lastName, String address, String email, String pesel, String phoneNumber){
 
+        DataBase B = new DataBase();
         counter++;
-        this.idEmployee = id;
-        this.login = createLogin(name, lastName);
+        this.idEmployee = B.getNumberofAdmins() + 1;
+        this.login = createLogin(name, lastName,idEmployee);
         this.password = hashPassword(password);
         this.name = name;
         this.lastName = lastName;

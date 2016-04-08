@@ -50,7 +50,7 @@ public class AddDealerForm extends JFrame implements ActionListener {
             String pesel = textFieldPesel.getText();
             String phoneNumber = textFieldPhoneNumber.getText();
 
-            Dealer D1 = new Dealer(1,password,name, lastName, address, email, pesel, phoneNumber, 1); //dodac wybor wypozyczlani
+            Dealer D1 = new Dealer(1, password, name, lastName, address, email, pesel, phoneNumber); //dodac wybor wypozyczlani
             DataBase B = new DataBase();
             B.insertDealer(D1);
 
