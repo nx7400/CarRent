@@ -9,8 +9,8 @@
       <column name="Login" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="Password" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="Name" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="LastName" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="Address" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="LastName" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="Address" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="Email" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="Pesel" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="PhoneNumber" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
@@ -85,7 +85,7 @@
     <table name="Vehicle" schema="" catalog="" type="TABLE">
       <column name="IDVehicle" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="Brand" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="Model" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="Model" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="IDWorkShop" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="IDRental" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="PricePerDay" sqlType="REAL" precision="0" scale="-1" nullable="true" jdbcType="6"/>

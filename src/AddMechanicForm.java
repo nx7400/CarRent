@@ -44,7 +44,7 @@ public class AddMechanicForm extends JFrame implements ActionListener {
             String pesel = textFieldPesel.getText();
             String phoneNumber = textFieldPhoneNumber.getText();
 
-            Mechanic M1 = new Mechanic(name, lastName, address, email, pesel, phoneNumber, 1); // dodac wybieranie warsztatu
+           // Mechanic M1 = new Mechanic(name, lastName, address, email, pesel, phoneNumber, 1); // dodac wybieranie warsztatu
         }
 
         if(source ==  buttonCancel){

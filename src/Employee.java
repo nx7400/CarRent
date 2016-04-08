@@ -1,3 +1,5 @@
+import org.mindrot.jbcrypt.BCrypt;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -7,26 +9,24 @@ import java.util.Scanner;
  */
 public abstract class Employee extends Person {
 
-    public static int id = 0;
+    public static int counter = 0;
     protected int idEmployee;
     protected String login;
     protected String password;
 
-    void loadLoginAndPassword(){
+    protected static String createLogin(String name, String lastName){
+        String login1 = name.substring(0,2);
+        String login2 = lastName.substring(0,2);
 
-        File pw = new File("pw.txt");
-        try {
-            Scanner read = new Scanner(pw);
-            this.login = read.nextLine();
-            this.password = read.nextLine();
-
-        }
-        catch (FileNotFoundException e){
-            System.out.println("Nie znaleziono pliku");
-        }
-
-
+        return login1+login2;
     }
+
+    protected static String hashPassword(String password){
+
+        String hashed = BCrypt.hashpw(password,BCrypt.gensalt());
+        return hashed;
+    }
+
 
     public int getIdEmployee() {
         return idEmployee;

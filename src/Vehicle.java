@@ -16,7 +16,7 @@ public abstract class Vehicle {
     protected String brand;
     protected String model;
     protected double pricePerDay;
-    protected boolean itRent;
+    protected int itRent;
     protected ArrayList<Fault> faultsList;
     protected ArrayList<Inspection> inspectionsList;
     //pole bool czy jest aktywny (przeglad i brak usterek)
@@ -73,11 +73,11 @@ public abstract class Vehicle {
         this.model = model;
     }
 
-    public boolean isItRent() {
+    public int isItRent() {
         return itRent;
     }
 
-    public void setItRent(boolean itRent) {
+    public void setItRent(int itRent) {
         this.itRent = itRent;
     }
 

@@ -9,17 +9,32 @@ public class Admin extends Employee {
 
     }
 
-    public Admin(String name, String lastName, String address, String email, String pesel, String phoneNumber){
+    public Admin(int id, String password, String name, String lastName, String address, String email, String pesel, String phoneNumber){
 
-        id++;
+        counter++;
         this.idEmployee = id;
+        this.login = createLogin(name, lastName);
+        this.password = hashPassword(password);
         this.name = name;
         this.lastName = lastName;
         this.address = address;
         this.email = email;
         this.pesel = pesel;
         this.phoneNumber = phoneNumber;
-        loadLoginAndPassword();
+    }
+
+    public Admin(int id, String login, String password, String name, String lastName, String address, String email, String pesel, String phoneNumber){
+
+        counter++;
+        this.idEmployee = id;
+        this.login = login;
+        this.password = password;
+        this.name = name;
+        this.lastName = lastName;
+        this.address = address;
+        this.email = email;
+        this.pesel = pesel;
+        this.phoneNumber = phoneNumber;
     }
 
 

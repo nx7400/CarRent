@@ -17,7 +17,7 @@ public class Inspection {
 
         id++;
         this.idInspection = id;
-        this.idVehicle = idVehicle;
+        this.setIdVehicle(idVehicle);
         this.description = description;
     }
 
@@ -35,5 +35,13 @@ public class Inspection {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getIdVehicle() {
+        return idVehicle;
+    }
+
+    public void setIdVehicle(int idVehicle) {
+        this.idVehicle = idVehicle;
     }
 }

@@ -9,10 +9,12 @@ public class Dealer extends Employee {
 
     }
 
-    public Dealer(String name, String lastName, String address, String email, String pesel, String phoneNumber, int idRental){
+    public Dealer(int id, String password, String name, String lastName, String address, String email, String pesel, String phoneNumber, int idRental){
 
-        id++;
+        counter++;
         this.idEmployee = id;
+        this.login = createLogin(name, lastName);
+        this.password = hashPassword(password);
         this.name = name;
         this.lastName = lastName;
         this.address = address;

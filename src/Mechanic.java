@@ -9,10 +9,12 @@ public class Mechanic extends Employee {
 
     }
 
-    public Mechanic(String name, String lastName, String address, String email, String pesel, String phoneNumber, int idWorkShop){
+    public Mechanic(int id, String login, String password, String name, String lastName, String address, String email, String pesel, String phoneNumber, int idWorkShop){
 
-        id++;
+        counter++;
         this.idEmployee = id;
+        this.login = createLogin(name, lastName);
+        this.password = hashPassword(password);
         this.name = name;
         this.lastName = lastName;
         this.address = address;

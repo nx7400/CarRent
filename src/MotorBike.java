@@ -18,7 +18,7 @@ public class MotorBike extends Vehicle {
         this.idWorkShop = idWorkShop;
         this.idRental = idRental;
         this.pricePerDay = pricePerDay;
-        this.itRent = false;
+        this.itRent = 0;
 
         faultsList = new ArrayList<Fault>();
         inspectionsList = new ArrayList<Inspection>();

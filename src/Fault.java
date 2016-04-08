@@ -21,7 +21,7 @@ public class Fault {
 
         id++;
         this.idFault = id;
-        this.idVehicle = idVehicle;
+        this.setIdVehicle(idVehicle);
         this.description = description;
         this.cost = cost;
 
@@ -49,5 +49,13 @@ public class Fault {
 
     public void setCost(int cost) {
         this.cost = cost;
+    }
+
+    public int getIdVehicle() {
+        return idVehicle;
+    }
+
+    public void setIdVehicle(int idVehicle) {
+        this.idVehicle = idVehicle;
     }
 }

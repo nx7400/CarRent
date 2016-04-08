@@ -50,6 +50,7 @@ public class AddCustomerForm extends JFrame implements ActionListener {
 
             Customer C1 = new Customer(name,lastName,address,email,pesel,phoneNumber);
 
+
             dispose();
 
             Object[] options = {"Dodaj pojazd do klienta","Wróć do menu"};

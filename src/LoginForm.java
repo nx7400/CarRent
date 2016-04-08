@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by Michał on 10.03.2016.
@@ -33,7 +35,7 @@ public class LoginForm extends JFrame{
 
     }
 
-    public void loginAndPasswordTest(Employee testedEmployee){
+    public void loginAndPasswordTest(List<Admin> adminList){
 
         buttonSignIn.addActionListener(new ActionListener() {
             @Override
@@ -41,21 +43,32 @@ public class LoginForm extends JFrame{
                 String getLogin = textField1.getText();
                 String getPass = passwordField1.getText();
 
-                if(BCrypt.checkpw(getPass,testedEmployee.password) && getLogin.equals(testedEmployee.login)){
-                    System.out.println("test pass good");
-                    JOptionPane.showMessageDialog(dialogWinodow,"Udane logowanie");
-                    MenuForm menu = new MenuForm();
-                    dispose();
 
+                for(Admin A:adminList){
+
+                    if(A.login.equals(getLogin)){
+
+                        if(BCrypt.checkpw(getPass,A.password)){
+                            System.out.println("test pass good");
+                            JOptionPane.showMessageDialog(dialogWinodow,"Udane logowanie");
+                            MenuForm menu = new MenuForm();
+                            dispose();
+
+                        }
+                        else {
+
+                            System.out.println("test pass wrong");
+                            JOptionPane.showMessageDialog(dialogWinodow,"Logowanie nie powiodlo sie sprobuj ponownie");
+
+                        }
+
+                    }
                 }
-                else {
-                    System.out.println("test pass wrong");
-                    JOptionPane.showMessageDialog(dialogWinodow,"Logowanie nie powiodlo sie sprobuj ponownie");
 
-                }
-
+                //JOptionPane.showMessageDialog(dialogWinodow,"Logowanie nie powiodlo sie sprobuj ponownie");
 
             }
+
         });
 
     }

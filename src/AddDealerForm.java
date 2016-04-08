@@ -15,6 +15,8 @@ public class AddDealerForm extends JFrame implements ActionListener {
     private JTextField textFieldPesel;
     private JButton buttonConfirm;
     private JButton buttonCancel;
+    private JPasswordField passwordField;
+
 
 
     public AddDealerForm() {
@@ -42,13 +44,15 @@ public class AddDealerForm extends JFrame implements ActionListener {
 
             String name = textFieldName.getText();
             String lastName = textFieldLastName.getText();
+            String password = passwordField.getText();
             String address = textFieldAdress.getText();
             String email = textFieldEmail.getText();
             String pesel = textFieldPesel.getText();
             String phoneNumber = textFieldPhoneNumber.getText();
 
-            Dealer D1 = new Dealer(name, lastName, address, email, pesel, phoneNumber, 1); //dodac wybor wypozyczlani
-
+            Dealer D1 = new Dealer(1,password,name, lastName, address, email, pesel, phoneNumber, 1); //dodac wybor wypozyczlani
+            DataBase B = new DataBase();
+            B.insertDealer(D1);
 
         }
 
