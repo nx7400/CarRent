@@ -9,9 +9,24 @@ public class WorkShop extends Building{
 
     public WorkShop(String city, String address){
 
-        id++;
-        this.idBuilding = id;
+        DataBase B = new DataBase();
+        counter++;
+        this.idBuilding = B.getNumberofWorsShops() + 1;
         this.city = city;
         this.address = address;
+    }
+
+    public WorkShop(int idBuilding, String city, String address){
+
+        counter++;
+        this.idBuilding = idBuilding;
+        this.city = city;
+        this.address = address;
+    }
+
+    public String toString(){
+
+        String result = "Id: " + this.idBuilding + ", " + this.city + ", " + this.address;
+        return result;
     }
 }

@@ -40,6 +40,11 @@ public class Dealer extends Employee {
         this.setIdRental(idRental);
     }
 
+    public String toString(){
+        String result = "Id: " + this.idEmployee + " login:" + this.login + ", " + this.name + ", " + this.lastName;
+        return result;
+    }
+
     public int getIdRental() {
         return idRental;
     }

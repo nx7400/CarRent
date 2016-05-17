@@ -9,7 +9,7 @@ import java.util.List;
 
 public abstract class Vehicle {
 
-    public static int id = 0;
+    public static int counter = 0;
     protected int idVehicle;
     protected int idWorkShop;
     protected int idRental;
@@ -28,7 +28,9 @@ public abstract class Vehicle {
 
 
     }
+
     public void addVehicleInspection(){
+
         Inspection C = new Inspection(12,"test");
     }
 

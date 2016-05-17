@@ -9,10 +9,26 @@ public class Rental extends Building {
 
     public Rental(String city, String address){
 
-        id++;
-        this.idBuilding = id;
+        DataBase B = new DataBase();
+        counter++;
+        this.idBuilding = B.getNumberofRentals() + 1;
         this.city = city;
-        this.address =address;
+        this.address = address;
+    }
+
+    public Rental(int idBuilding, String city, String address){
+
+        counter++;
+        this.idBuilding = idBuilding;
+        this.city = city;
+        this.address = address;
+
+    }
+
+    public String toString(){
+
+        String result = "Id: " + this.idBuilding + ", " + this.city + ", " + this.address;
+        return result;
     }
 
 }

@@ -11,6 +11,7 @@ public class AddRentalForm extends JFrame implements ActionListener{
     private JTextField textFieldaddress;
     private JButton buttonConfirm;
     private JButton buttonCancel;
+    private JFrame statusDialogWindow;
 
     public AddRentalForm(){
 
@@ -37,6 +38,15 @@ public class AddRentalForm extends JFrame implements ActionListener{
             String address = textFieldaddress.getText();
 
             Rental R = new Rental(city,address);
+
+            DataBase B = new DataBase();
+
+            if(B.insertRental(R)){
+                JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie warsztatu do bazy danych");
+
+            } else {
+                JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy dodawaniu warsztatu do bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+            }
 
         }
 

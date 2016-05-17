@@ -39,6 +39,11 @@ public class Mechanic extends Employee {
         this.idWorkShop = idWorkShop;
     }
 
+    public String toString(){
+        String result = "Id: " + this.idEmployee + " login: " + this.login + ", " + this.name + ", " + this.lastName;
+        return result;
+    }
+
     public int getIdWorkShop() {
         return idWorkShop;
     }

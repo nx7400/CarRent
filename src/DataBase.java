@@ -44,6 +44,7 @@ public class DataBase {
         }
     }
 
+///////////////////////////////INSERT_BLOCK///////////////////////////////////////////////////////////////////////
 
     public boolean insertCustomer(Customer C){
 
@@ -168,13 +169,19 @@ public class DataBase {
     public boolean insertVehicle(Vehicle V){
 
         try{
-            PreparedStatement prepStat = conn.prepareStatement("INSERT INTO Vehicle VALUES (NULL,?,?,?,?,?,?)");
+            PreparedStatement prepStat = conn.prepareStatement("INSERT INTO Vehicle VALUES (NULL,?,?,?,?,?,?,?)");
             prepStat.setString(1,V.brand);
             prepStat.setString(2,V.model);
             prepStat.setInt(3,V.idWorkShop);
             prepStat.setInt(4,V.idRental);
             prepStat.setDouble(5,V.pricePerDay);
             prepStat.setInt(6,V.itRent);
+            if(V instanceof Car){
+                prepStat.setString(7,"Samochod");
+            } else{
+                prepStat.setString(7,"Motocykl");
+            }
+            System.out.println("Wstawiono pojazd");
         } catch (SQLException e){
             System.err.println("Blad przy wstawianiu pojazdu");
             e.printStackTrace();
@@ -245,6 +252,8 @@ public class DataBase {
         return true;
     }
 
+//////////////////////////////SELECT_BLOCK////////////////////////////////////////////////////////////////////////////
+
     public List<Employee> selectAdmin(){
 
         List<Employee> adminList = new LinkedList<Employee>();
@@ -310,6 +319,7 @@ public class DataBase {
         return mechanicList;
     }
 
+
     public List<Employee> selectDealer(){
 
         List<Employee> dealerList = new LinkedList<Employee>();
@@ -343,6 +353,145 @@ public class DataBase {
         return dealerList;
     }
 
+
+    public List<Customer> selectCustomer(){
+
+        List<Customer> customerList = new LinkedList<Customer>();
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT * FROM Customer");
+            int idCustomer;
+            String name, lastName, address, email, pesel, phonenumber;
+            while(result.next()){
+                idCustomer = result.getInt("IDCustomer");
+                name = result.getString("Name");
+                lastName = result.getString("LastName");
+                address = result.getString("Address");
+                email = result.getString("Email");
+                pesel = result.getString("Pesel");
+                phonenumber = result.getString("PhoneNumber");
+                customerList.add(new Customer(idCustomer, name, lastName, address, email, pesel, phonenumber));
+
+            }
+        } catch (SQLException e){
+            System.err.println("Blad przy wczytawaniu Klientow");
+            e.printStackTrace();
+            return null;
+
+        }
+
+        System.out.println("Poprawne wczatanie klientow");
+        return customerList;
+    }
+
+    public List<Rental> selectRental(){
+
+        List<Rental> rentalList = new LinkedList<Rental>();
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT * FROM Rental");
+            int idBuilding;
+            String city, address;
+            while(result.next()){
+                idBuilding = result.getInt("IDRental");
+                city = result.getString("City");
+                address = result.getString("Address");
+
+                rentalList.add(new Rental(idBuilding, city, address));
+
+            }
+        } catch (SQLException e){
+            System.err.println("Blad przy wczytawaniu wypozyczalni");
+            e.printStackTrace();
+            return null;
+
+        }
+
+        System.out.println("Poprawne wczatanie wypozyczalni");
+        return rentalList;
+    }
+
+    public List<WorkShop> selectWorkShop(){
+
+        List<WorkShop> workShopList = new LinkedList<WorkShop>();
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT * FROM WorkShop");
+            int idBuilding;
+            String city, address;
+            while(result.next()){
+                idBuilding = result.getInt("IDWorkShop");
+                city = result.getString("City");
+                address = result.getString("Address");
+
+                workShopList.add(new WorkShop(idBuilding, city, address));
+
+            }
+        } catch (SQLException e){
+            System.err.println("Blad przy wczytawaniu wypozyczalni");
+            e.printStackTrace();
+            return null;
+
+        }
+
+        System.out.println("Poprawne wczatanie wypozyczalni");
+        return workShopList;
+    }
+
+    public List<Vehicle> selectVehicle(){
+
+        List<Vehicle> vehicleList = new LinkedList<Vehicle>();
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT * FROM Vehicle");
+            int idVehicle, idWorkShop, idRental, itRent;
+            double pricePerDay;
+            String brand, model, type;
+            while(result.next()){
+                idVehicle = result.getInt("IDVehicle");
+                idRental = result.getInt("IDRental");
+                idWorkShop = result.getInt("IDWorkShop");
+                itRent = result.getInt("ItRent");
+                pricePerDay = result.getDouble("PricePerDay");
+                brand = result.getString("Brand");
+                model = result.getString("Model");
+                type = result.getString("Type");
+                if(type.equals("Car"))
+                    vehicleList.add(new Car(idVehicle, brand, model, idWorkShop, idRental, pricePerDay, itRent));
+                if(type.equals("MotorBike"))
+                    vehicleList.add(new MotorBike(idVehicle, brand, model, idWorkShop, idRental, pricePerDay, itRent));
+
+            }
+        } catch (SQLException e){
+            System.err.println("Blad przy wczytawaniu Klientow");
+            e.printStackTrace();
+            return null;
+
+        }
+
+        System.out.println("Poprawne wczatanie klientow");
+        return vehicleList;
+    }
+
+///////////////////////NUMBER_OF_BLOCK/////////////////////////////////////////////////////////////////////////////////
+
+    public int getNumberofCustomers(){
+        int numberOfCustomers = 0;
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT IDCustomer, COUNT(IDCustomer) AS NumberOfCustomers FROM Customer");
+
+            while(result.next()){ // te wszystkie while to wywalenia ! po co ja je wogole tu wstawilem ?!
+                numberOfCustomers = result.getInt("NumberOfCustomers");
+            }
+        } catch (SQLException e) {
+            System.err.println("Blad przy pobieraniu liczby klientow");
+            e.printStackTrace();
+        }
+
+        return numberOfCustomers;
+
+    }
 
     public int getNumberofDealers(){
         int numberOfDealers = 0;
@@ -397,6 +546,111 @@ public class DataBase {
         return numberOfMechanics;
 
     }
+
+    public int getNumberofRentals(){
+        int numberOfRentals = 0;
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT IDRental, COUNT(IDRental) AS NumberOfRentals FROM Rental");
+
+            while(result.next()){
+                numberOfRentals = result.getInt("NumberOfRentals");
+            }
+        } catch (SQLException e) {
+            System.err.println("Blad przy pobieraniu liczby wypozyczalni");
+            e.printStackTrace();
+        }
+
+        return numberOfRentals;
+
+    }
+
+    public int getNumberofWorsShops(){
+        int numberOfWorkShops = 0;
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT IDWorkShop, COUNT(IDWorkShop) AS NumberOfWorkShops FROM WorkShop");
+
+            while(result.next()){
+                numberOfWorkShops = result.getInt("NumberOfWorkShops");
+            }
+        } catch (SQLException e) {
+            System.err.println("Blad przy pobieraniu liczby warszatow");
+            e.printStackTrace();
+        }
+
+        return numberOfWorkShops;
+
+    }
+
+    public int getNumberofVehicles(){
+        int numberOfVehicles = 0;
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT IDVehicle, COUNT(IDVehicle) AS NumberOfVehicles FROM Vehicle");
+
+            while(result.next()){
+                numberOfVehicles = result.getInt("NumberOfVehicles");
+            }
+        } catch (SQLException e) {
+            System.err.println("Blad przy pobieraniu liczby pojazdow");
+            e.printStackTrace();
+        }
+
+        return numberOfVehicles;
+
+    }
+
+    public int getNumberofInvoice(){
+        int numberOfInvoice = 0;
+
+        try{
+            ResultSet result = stat.executeQuery("SELECT IDInvoice, COUNT(IDInvoice) AS NumberOfInvoice FROM Invoice");
+
+            while(result.next()){
+                numberOfInvoice = result.getInt("NumberOfVehicles");
+            }
+        } catch (SQLException e) {
+            System.err.println("Blad przy pobieraniu liczby pojazdow");
+            e.printStackTrace();
+        }
+
+        return numberOfInvoice;
+
+    }
+
+    public boolean removeDealer(int id){
+
+        try{
+            PreparedStatement prepStat = conn.prepareStatement("DELETE FROM Dealer WHERE IDDealer = ?");
+            prepStat.setInt(1,id);
+            prepStat.execute();
+
+        } catch (SQLException e){
+            System.err.println("Blad przy wstawianiu usterki");
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean removeMechanic(int id){
+
+        try{
+            PreparedStatement prepStat = conn.prepareStatement("DELETE FROM Mechanic WHERE IDMechanic = ?");
+            prepStat.setInt(1,id);
+            prepStat.execute();
+
+        } catch (SQLException e){
+            System.err.println("Blad przy wstawianiu usterki");
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
 
 
 }

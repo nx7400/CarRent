@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Invoice {
 
-    public static int id = 0;
+    public static int counter = 0;
     private int idInvoice;
     private int idCustomer;
     private int rentTime;
@@ -18,17 +18,21 @@ public class Invoice {
 
     public Invoice(int idCustomer, int rentTime){
 
-        id++;
-        this.idInvoice = id;
+        DataBase B = new DataBase();
+
+        counter++;
+        this.idInvoice = B.getNumberofInvoice();
         this.idCustomer = idCustomer;
         this.rentTime = rentTime; // in days
         //dodawanie samochodu do listy.
 
     }
 
+
     public void coutTotalCost(){
 
     }
+
 
     public void addCarToInvoice(){ //dodawanie samochodu do istniejacej faktury.
 

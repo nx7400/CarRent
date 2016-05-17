@@ -20,7 +20,8 @@ public class LoginForm extends JFrame {
     private JRadioButton adminRadioButton;
     private JRadioButton dealerRadioButton;
     private JRadioButton mechanicRadioButton;
-    private JFrame dialogWinodow;
+    private JFrame testLoginAndPasswordDialogWinodow;
+    private boolean loginAndPasswordState;
 
 
 
@@ -50,6 +51,7 @@ public class LoginForm extends JFrame {
                 List<Employee> adminList = B.selectAdmin();
                 loginAndPasswordTest(adminList);
 
+
             }
         });
 
@@ -59,6 +61,7 @@ public class LoginForm extends JFrame {
 
                 List<Employee> dealerList = B.selectDealer();
                 loginAndPasswordTest(dealerList);
+
 
             }
         });
@@ -70,6 +73,9 @@ public class LoginForm extends JFrame {
 
                 List<Employee> mechanicList = B.selectMechanic();
                 loginAndPasswordTest(mechanicList);
+
+
+
 
             }
         });
@@ -84,11 +90,13 @@ public class LoginForm extends JFrame {
 
     public void loginAndPasswordTest(List<Employee> employeesList) {
 
+
         buttonSignIn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String getLogin = textField1.getText();
                 String getPass = passwordField1.getText();
+
 
 
                 for (Employee A : employeesList) {
@@ -97,21 +105,32 @@ public class LoginForm extends JFrame {
 
                         if (BCrypt.checkpw(getPass, A.password)) {
                             System.out.println("test pass good");
-                            JOptionPane.showMessageDialog(dialogWinodow, "Udane logowanie");
-                            MenuForm menu = new MenuForm();
+                            JOptionPane.showMessageDialog(testLoginAndPasswordDialogWinodow, "Udane logowanie");
+
+                            if(A instanceof Admin){
+                                MenuForm menu = new MenuForm();
+                            }
+
+                            if(A instanceof Dealer){
+                                DealerMenu menu = new DealerMenu();
+                            }
+
+                            if(A instanceof Mechanic){
+                                MechanicMenu menu = new MechanicMenu();
+                            }
                             dispose();
+
 
                         } else {
 
                             System.out.println("test pass wrong");
-                            JOptionPane.showMessageDialog(dialogWinodow, "Logowanie nie powiodlo sie sprobuj ponownie");
-
+                            //JOptionPane.showMessageDialog(testLoginAndPasswordDialogWinodow, "Logowanie nie powiodlo sie sprobuj ponownie");
                         }
 
                     }
                 }
 
-                //JOptionPane.showMessageDialog(dialogWinodow,"Logowanie nie powiodlo sie sprobuj ponownie");
+                //JOptionPane.showMessageDialog(testLoginAndPasswordDialogWinodow, "Logowanie nie powiodlo sie sprobuj ponownie");
 
             }
 

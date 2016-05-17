@@ -25,6 +25,12 @@ public class MenuForm extends JFrame implements ActionListener{
     private JButton buttonRemoveVehicle;
     private JButton buttonChangeToDealer;
     private JButton buttonChangeToMechanic;
+    private JButton buttonShowCustomers;
+    private JButton buttonShowDealers;
+    private JButton buttonShowMechanics;
+    private JButton buttonShowRentals;
+    private JButton buttonShowWorkShops;
+    private JButton buttonShowVehicles;
 
 
     public MenuForm(){
@@ -43,6 +49,15 @@ public class MenuForm extends JFrame implements ActionListener{
         buttonAddWorkShop.addActionListener(this);
         buttonAddRental.addActionListener(this);
         buttonAddVehicle.addActionListener(this);
+
+        buttonRemoveDealer.addActionListener(this);
+        buttonRemoveMechanic.addActionListener(this);
+
+        buttonShowCustomers.addActionListener(this);
+        buttonShowDealers.addActionListener(this);
+        buttonShowMechanics.addActionListener(this);
+        buttonShowRentals.addActionListener(this);
+        buttonShowWorkShops.addActionListener(this);
 
         buttonChangeToDealer.addActionListener(this);
         buttonChangeToMechanic.addActionListener(this);
@@ -86,6 +101,14 @@ public class MenuForm extends JFrame implements ActionListener{
             AddVehicleForm addVehicle = new AddVehicleForm();
         }
 
+        if(source == buttonRemoveDealer){
+            RemoveDealerForm removeDealer = new RemoveDealerForm();
+        }
+
+        if(source == buttonRemoveMechanic){
+            RemoveMechnicFrom2 removeMechnic = new RemoveMechnicFrom2();
+        }
+
         if(source == buttonChangeToDealer){
 
             DealerMenu dealerMenu = new DealerMenu();
@@ -94,6 +117,27 @@ public class MenuForm extends JFrame implements ActionListener{
         if(source == buttonChangeToMechanic){
             MechanicMenu mechanicMenu = new MechanicMenu();
         }
+
+        if(source == buttonShowCustomers){
+            ShowCustomersForm showCustomers = new ShowCustomersForm();
+        }
+
+        if(source == buttonShowDealers){
+            ShowDealersForm showDealers = new ShowDealersForm();
+        }
+
+        if(source == buttonShowMechanics){
+            ShowMechanicsForm showMechanics = new ShowMechanicsForm();
+        }
+
+        if(source == buttonShowRentals){
+            ShowRentalsForm showRentals = new ShowRentalsForm();
+        }
+
+        if(source == buttonShowWorkShops){
+            ShowWorkShopsForm showWorkShops = new ShowWorkShopsForm();
+        }
+
 
     }
 }

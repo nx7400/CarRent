@@ -90,6 +90,7 @@
       <column name="IDRental" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="PricePerDay" sqlType="REAL" precision="0" scale="-1" nullable="true" jdbcType="6"/>
       <column name="ItRent" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="Type" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <primary-key columns="idvehicle"/>
     </table>
     <table name="WorkShop" schema="" catalog="" type="TABLE">

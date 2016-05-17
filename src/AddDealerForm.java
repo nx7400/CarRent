@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Michał on 11.03.2016.
@@ -16,7 +18,11 @@ public class AddDealerForm extends JFrame implements ActionListener {
     private JButton buttonConfirm;
     private JButton buttonCancel;
     private JPasswordField passwordField;
+    private JComboBox comboBoxRental;
+    private JFrame statusDialogWindow;
+    private JFrame wrongIdDialogWindow;
 
+    private int idRentalSelected = -1;
 
 
     public AddDealerForm() {
@@ -28,9 +34,23 @@ public class AddDealerForm extends JFrame implements ActionListener {
         setLocation(50, 50);
         setContentPane(panel1);
 
+
+        DataBase B = new DataBase();
+        List<Rental> rentalsList;
+        rentalsList = B.selectRental();
+        addRentalsToComboBox(rentalsList);
+
         buttonConfirm.addActionListener(this);
         buttonCancel.addActionListener(this);
+        comboBoxRental.addActionListener(this);
 
+
+    }
+
+    private void addRentalsToComboBox(List<Rental> rentalList){
+
+        for(Rental R : rentalList)
+            comboBoxRental.addItem(R.toString());
 
     }
 
@@ -50,13 +70,32 @@ public class AddDealerForm extends JFrame implements ActionListener {
             String pesel = textFieldPesel.getText();
             String phoneNumber = textFieldPhoneNumber.getText();
 
-            Dealer D1 = new Dealer(1, password, name, lastName, address, email, pesel, phoneNumber); //dodac wybor wypozyczlani
+            int idRental = 1;
+
+            if(idRentalSelected == -1){
+                JOptionPane.showMessageDialog(wrongIdDialogWindow, "Nie wybrano id wypozyczlani !!!", "Error", JOptionPane.ERROR_MESSAGE); // alternatywnie prztpisywac domyslnie id == 1
+            } else {
+                idRental = idRentalSelected;
+            }
+
+            Dealer D = new Dealer(idRental, password, name, lastName, address, email, pesel, phoneNumber);
+
             DataBase B = new DataBase();
-            B.insertDealer(D1);
+
+            if(B.insertDealer(D)){
+                JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie sprzedawcy do bazy danych");
+
+            } else {
+                JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy dodawaniu sprzedawcy do bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+            }
 
         }
 
-        if(source == buttonCancel){
+        if (source == comboBoxRental){
+            idRentalSelected = comboBoxRental.getSelectedIndex() + 1;
+        }
+
+        if (source == buttonCancel){
             dispose();
         }
 

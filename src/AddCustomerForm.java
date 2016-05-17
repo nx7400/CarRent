@@ -17,6 +17,7 @@ public class AddCustomerForm extends JFrame implements ActionListener {
     private JButton buttonConfirm;
     private JButton buttonCancel;
     private JFrame dialogWindow;
+    private JFrame statusDialogWindow;
 
     public AddCustomerForm(){
 
@@ -50,25 +51,32 @@ public class AddCustomerForm extends JFrame implements ActionListener {
 
             Customer C1 = new Customer(name,lastName,address,email,pesel,phoneNumber);
 
+            DataBase B = new DataBase();
 
-            dispose();
+            if(B.insertCustomer(C1)){
+                JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie klienta do bazy danych");
 
-            Object[] options = {"Dodaj pojazd do klienta","Wróć do menu"};
-
-            int c = JOptionPane.showOptionDialog(dialogWindow,"Co chcesz zrobić dalej?","Wybierz opcje",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);
-
-            System.out.println(c);
-
-            switch (c){
-                case 0:
-                    // formularz wyboru pojazdu
-                    dispose();
-                case 1:
-                    DealerMenu dealerMenu = new DealerMenu();
-
+            } else {
+                JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy dodawaniu klienta do bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
             }
 
 
+            //dispose();
+
+            Object[] options = {"Dodaj pojazd do klienta","Wróć do menu"};
+
+            int c;
+
+            c = JOptionPane.showOptionDialog(dialogWindow,"Co chcesz zrobić dalej?","Wybierz opcje",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);
+
+            switch (c){
+                case 0:
+                    AddVehicleToCustomer addVehicleToCustomer = new AddVehicleToCustomer();
+                    break;
+                case 1:
+                    dispose();
+                    break;
+            }
 
         }
 
