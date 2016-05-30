@@ -104,4 +104,7 @@
       <column name="seq" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
     </table>
   </data-source>
+  <data-source name="MySQL - CarRent@localhost" uuid="51b5e0c1-3033-4e9b-a65e-89d43f43b7e5">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
