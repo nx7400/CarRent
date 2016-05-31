@@ -1,5 +1,6 @@
 package View;
 
+import Controler.PersonControler;
 import Model.DataBase;
 import Model.Employee;
 
@@ -16,8 +17,11 @@ public class RemoveDealerForm2 extends JFrame implements ActionListener {
     private JPanel panel1;
     private JButton buttonRemove;
     private JButton buttonCancel;
+    private JFrame statusDialogWindow;
 
-    private int removeDealerId;
+    private int IdDealerToRemove = -1;
+
+    PersonControler pc = new PersonControler();
 
     public RemoveDealerForm2(){
 
@@ -28,17 +32,11 @@ public class RemoveDealerForm2 extends JFrame implements ActionListener {
         setLocation(50,50);
         setContentPane(panel1);
 
-        DataBase B = new DataBase();
-
-        List<Employee> dealerList = B.selectDealer();
-
-        addDealersToComboBox(dealerList);
+        addDealersToComboBox(pc.getDealersFromDataBase());
 
         buttonRemove.addActionListener(this);
         buttonCancel.addActionListener(this);
         comboBoxRemoveDealer.addActionListener(this);
-
-
 
 
     }
@@ -57,14 +55,22 @@ public class RemoveDealerForm2 extends JFrame implements ActionListener {
 
         if(source == buttonRemove){
 
-            DataBase B = new DataBase();
 
-            if(B.removeDealer(removeDealerId)){
-                System.out.println("Poprawne usuniecie sprzedawcy");
-            } else{
-                System.out.println("Blad przy usuwani sprzedawcy");
+            if(IdDealerToRemove != -1) {
+
+                if (pc.removeDealerFromDataBase(IdDealerToRemove)) {
+
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Udane usuniecie sprzedawcy z bazy danych");
+
+                } else {
+
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy usuwaniu sprzedawcy z bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+
+            } else {
+
+                JOptionPane.showMessageDialog(statusDialogWindow, "Nie wybrano sprzedawcy do usniecia", "Error", JOptionPane.ERROR_MESSAGE);
             }
-
 
 
         }
@@ -74,7 +80,7 @@ public class RemoveDealerForm2 extends JFrame implements ActionListener {
         }
 
         if(source == comboBoxRemoveDealer){
-            removeDealerId = comboBoxRemoveDealer.getSelectedIndex() + 1;
+            IdDealerToRemove = comboBoxRemoveDealer.getSelectedIndex() + 1;
         }
 
     }

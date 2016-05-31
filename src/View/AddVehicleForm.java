@@ -1,11 +1,15 @@
 package View;
 
+import Controler.BuildingControler;
+import Controler.VehicleControler;
 import Model.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Michał on 18.03.2016.
@@ -22,11 +26,12 @@ public class AddVehicleForm extends JFrame implements ActionListener {
     private JComboBox comboBoxRental;
     private JComboBox comboBoxWrokShop;
     private JFrame wrongIdDialogWindow;
-    private JFrame wrongVehicleType;
+    private JFrame statusDialogWindow;
+
+    BuildingControler bc = new BuildingControler();
 
     private int idRentalSelected = -1;
     private int idWorkShopSelected = -1;
-    private int vehicleType = -1; // -1-brak wyboru, 0-samochod, 1-motocykl
 
 
     public AddVehicleForm(){
@@ -37,28 +42,13 @@ public class AddVehicleForm extends JFrame implements ActionListener {
         setLocation(50,50);
         setContentPane(panel1);
 
-        DataBase B = new DataBase();
-
-        List<Rental> rentalList;
-        rentalList = B.selectRental();
-
-        List<WorkShop> workShopList;
-        workShopList = B.selectWorkShop();
-
-        addRentalsToComboBox(rentalList);
-        addWorkShopsToComboBox(workShopList);
+        addRentalsToComboBox(bc.getRentalFromDataBase());
+        addWorkShopsToComboBox(bc.getWorkShopFromDataBase());
 
         buttonConfirm.addActionListener(this);
         buttonCancel.addActionListener(this);
         comboBoxRental.addActionListener(this);
         comboBoxWrokShop.addActionListener(this);
-
-        ButtonGroup buttonGroup = new ButtonGroup();
-        buttonGroup.add(radioButtonCar);
-        buttonGroup.add(radioButtonMotorBike);
-        radioButtonCar.addActionListener(this);
-        radioButtonMotorBike.addActionListener(this);
-
 
     }
 
@@ -81,46 +71,83 @@ public class AddVehicleForm extends JFrame implements ActionListener {
 
         Object source = e.getSource();
 
-        if(source == buttonConfirm){
+        if(source == buttonConfirm) {
 
             String brand = textFieldBrand.getText();
             String model = textFieldModel.getText();
-            String pricePerDayTemp = textFieldPricePerDay.getText();
+            String pricePerDay = textFieldPricePerDay.getText();
 
-            double pricePerDay = Double.parseDouble(pricePerDayTemp);
-            int idWorkShop = 1;
-            int idRental = 1;
+            Car C1 = new Car();
 
-            DataBase B = new DataBase();
+            Pattern brandPattern = Pattern.compile("[A-Z]([a-z])+");
+            Matcher brandMatcher = brandPattern.matcher(brand);
 
-            if(idRentalSelected == -1 || idWorkShopSelected == -1){
+            if (brandMatcher.matches()) {
+
+                C1.setBrand(brand);
+
+            } else {
+
+                JOptionPane.showMessageDialog(statusDialogWindow, "Marka powinna zaczynać sie od dużej litery i zawierać tylko litery!!!", "Błędne marka pojazdu", JOptionPane.ERROR_MESSAGE);
+
+            }
+
+
+            Pattern modelPattern1 = Pattern.compile("([0-9])*[A-Z]([a-z])+([0-9])*");
+            Matcher modelMatcher1 = modelPattern1.matcher(model);
+
+
+            Pattern modelPattern2 = Pattern.compile("([0-9])+");
+            Matcher modelMatcher2 = modelPattern2.matcher(model);
+
+            if (modelMatcher1.matches() || modelMatcher2.matches()) {
+
+                C1.setModel(model);
+
+            } else {
+
+                JOptionPane.showMessageDialog(statusDialogWindow, "Model moze zawierać cyfry oraz litery bez spacji!!!", "Błędny model pojazdu", JOptionPane.ERROR_MESSAGE);
+
+            }
+
+            Pattern pricePerDayPattern = Pattern.compile("[1-9]([0-9])*\\.[0-9]+");
+            Matcher pricePerDayMatcher = pricePerDayPattern.matcher(pricePerDay);
+
+            if (pricePerDayMatcher.matches()) {
+
+                C1.setPricePerDay(Double.parseDouble(pricePerDay));
+
+            } else{
+
+                JOptionPane.showMessageDialog(statusDialogWindow, "Cena może zawierać tylko cyfry, nie może zaczynać się od zera oraz musi być w formie np. 250.00!!!", "Błędna cena pojazdu", JOptionPane.ERROR_MESSAGE);
+
+            }
+
+
+            if (idRentalSelected == -1 || idWorkShopSelected == -1) {
 
                 JOptionPane.showMessageDialog(wrongIdDialogWindow, "Nie wybrano id wypozyczlani lub warsztatu !!!"); // alternatywnie prztpisywac domyslnie id == 1
 
             } else {
-                idRental = idRentalSelected + 1;
-                idWorkShop = idWorkShopSelected + 1;
+                C1.setIdRental(idRentalSelected + 1);
+                C1.setIdWorkShop(idWorkShopSelected + 1);
             }
 
 
-            switch(vehicleType){
-                case 0:
-                    Vehicle C = new Car(brand, model, idWorkShop, idRental, pricePerDay);
-                    B.insertVehicle(C);
-                    break;
-                case 1:
-                    Vehicle M = new MotorBike(brand, model, idWorkShop, idRental, pricePerDay);
-                    B.insertVehicle(M);
-                    break;
-                default:
-                    JOptionPane.showMessageDialog(wrongVehicleType, "Nie wybrano typu pojazdu !!!");
+            if (brandMatcher.matches() && (modelMatcher1.matches() || modelMatcher2.matches())) {
+
+                VehicleControler vc = new VehicleControler();
+
+                if (vc.addVehicleToDataBase(C1)) {
+
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Udane dodanie samochodu do bazy danych");
+
+                } else {
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy dodawaniu samochodu do bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+
 
             }
-
-            //dispose();
-            //Object[] options = {"Dodaj pojazd do klienta","Wróć do menu"};
-            //int c = JOptionPane.showOptionDialog(dialogWindow,"Co chcesz zrobić dalej?","Wybierz opcje",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);
-           // System.out.println(c);
 
         }
 
@@ -130,14 +157,6 @@ public class AddVehicleForm extends JFrame implements ActionListener {
 
         if(source == comboBoxWrokShop){
             idWorkShopSelected = comboBoxWrokShop.getSelectedIndex();
-        }
-
-        if(source == radioButtonCar){
-            vehicleType = 0;
-        }
-
-        if(source == radioButtonMotorBike){
-            vehicleType = 1;
         }
 
         if(source == buttonCancel){

@@ -9,6 +9,10 @@ public class Mechanic extends Employee {
 
     public Mechanic(){
 
+        DataBase B = new DataBase();
+        counter++;
+        this.idEmployee = B.getNumberofMechanics() + 1;
+
     }
 
     public Mechanic(int idWorkShop, String password, String name, String lastName, String address, String email, String pesel, String phoneNumber){

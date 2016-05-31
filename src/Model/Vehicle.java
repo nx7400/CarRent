@@ -15,22 +15,11 @@ public abstract class Vehicle {
     protected String model;
     protected double pricePerDay;
     protected int itRent;
-    protected ArrayList<Fault> faultsList;
-    protected ArrayList<Inspection> inspectionsList;
+
     //pole bool czy jest aktywny (przeglad i brak usterek)
 
 
     public abstract String toString();
-
-    public void addVehicleFault(){
-
-
-    }
-
-    public void addVehicleInspection(){
-
-        Inspection C = new Inspection(12,"test");
-    }
 
 
     public int getIdVehicle() {
@@ -85,7 +74,7 @@ public abstract class Vehicle {
         return pricePerDay;
     }
 
-    public void setPricePerDay(int pricePerDay) {
+    public void setPricePerDay(double pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
 }

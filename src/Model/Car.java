@@ -9,6 +9,10 @@ import java.util.*;
 public class Car extends Vehicle {
 
 
+    public Car(){
+
+    }
+
     public Car(String brand, String model, int idWorkShop, int idRental, double pricePerDay) {
 
         DataBase B = new DataBase();
@@ -22,10 +26,6 @@ public class Car extends Vehicle {
         this.pricePerDay = pricePerDay;
         this.itRent = 0;
 
-        faultsList = new ArrayList<Fault>();
-        inspectionsList = new ArrayList<Inspection>();
-
-
     }
 
     public Car(int id, String brand, String model, int idWorkShop, int idRental, double pricePerDay, int itRent) {
@@ -38,10 +38,6 @@ public class Car extends Vehicle {
         this.idRental = idRental;
         this.pricePerDay = pricePerDay;
         this.itRent = itRent;
-
-        faultsList = new ArrayList<Fault>();
-        inspectionsList = new ArrayList<Inspection>();
-
 
     }
 

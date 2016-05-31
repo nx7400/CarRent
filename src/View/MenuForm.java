@@ -25,12 +25,12 @@ public class MenuForm extends JFrame implements ActionListener{
     private JButton buttonRemoveRental;
     private JButton buttonRemoveVehicle;
     private JButton buttonChangeToDealer;
-    private JButton buttonChangeToMechanic;
     private JButton buttonShowCustomers;
     private JButton buttonShowDealers;
     private JButton buttonShowMechanics;
     private JButton buttonShowRentals;
     private JButton buttonShowWorkShops;
+    private JButton buttonShowVehicle;
     private JButton buttonShowVehicles;
 
 
@@ -53,25 +53,21 @@ public class MenuForm extends JFrame implements ActionListener{
 
         buttonRemoveDealer.addActionListener(this);
         buttonRemoveMechanic.addActionListener(this);
+        buttonRemoveVehicle.addActionListener(this);
+        buttonRemoveWorkShop.addActionListener(this);
+        buttonRemoveRental.addActionListener(this);
 
         buttonShowCustomers.addActionListener(this);
         buttonShowDealers.addActionListener(this);
         buttonShowMechanics.addActionListener(this);
         buttonShowRentals.addActionListener(this);
         buttonShowWorkShops.addActionListener(this);
+        buttonShowVehicle.addActionListener(this);
 
         buttonChangeToDealer.addActionListener(this);
-        buttonChangeToMechanic.addActionListener(this);
 
 
 
-
-
-    }
-
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 
     @Override
@@ -110,13 +106,23 @@ public class MenuForm extends JFrame implements ActionListener{
             RemoveMechnicFrom2 removeMechnic = new RemoveMechnicFrom2();
         }
 
+        if(source == buttonRemoveVehicle){
+
+            RemoveVehicleForm removeVehicle = new RemoveVehicleForm();
+        }
+
+        if (source == buttonRemoveWorkShop){
+
+            RemoveWrokShopForm removeWrokShop = new RemoveWrokShopForm();
+        }
+
+        if(source == buttonRemoveRental){
+            RemoveRentalForm removeRental = new RemoveRentalForm();
+        }
+
         if(source == buttonChangeToDealer){
 
             DealerMenu dealerMenu = new DealerMenu();
-        }
-
-        if(source == buttonChangeToMechanic){
-            MechanicMenu mechanicMenu = new MechanicMenu();
         }
 
         if(source == buttonShowCustomers){
@@ -137,6 +143,10 @@ public class MenuForm extends JFrame implements ActionListener{
 
         if(source == buttonShowWorkShops){
             ShowWorkShopsForm showWorkShops = new ShowWorkShopsForm();
+        }
+
+        if(source == buttonShowVehicle){
+            ShowVehicleForm showVehicle = new ShowVehicleForm();
         }
 
 

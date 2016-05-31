@@ -1,5 +1,7 @@
 package View;
 
+import Controler.BuildingControler;
+import Model.Building;
 import Model.DataBase;
 import Model.WorkShop;
 
@@ -17,6 +19,8 @@ public class ShowWorkShopsForm extends JFrame {
     private JButton buttonReturn;
     private DefaultListModel listModel;
 
+    BuildingControler bc = new BuildingControler();
+
     public ShowWorkShopsForm(){
 
 
@@ -27,9 +31,8 @@ public class ShowWorkShopsForm extends JFrame {
         setLocation(50,50);
 
 
-        DataBase B = new DataBase();
 
-        List<WorkShop> workShopsList = B.selectWorkShop();
+        List<WorkShop> workShopsList = bc.getWorkShopFromDataBase();
 
 
         listModel = new DefaultListModel();

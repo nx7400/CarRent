@@ -67,24 +67,6 @@ public class LoginForm extends JFrame {
         });
 
 
-        mechanicRadioButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                List<Employee> mechanicList = B.selectMechanic();
-                loginAndPasswordTest(mechanicList);
-
-
-
-
-            }
-        });
-
-
-//        logoPanel = new LogoPanel();
-//        add(logoPanel);
-//        //pack();
-
     }
 
 
@@ -109,16 +91,13 @@ public class LoginForm extends JFrame {
 
                             if(A instanceof Admin){
                                 MenuForm menu = new MenuForm();
+                                dispose();
                             }
 
                             if(A instanceof Dealer){
                                 DealerMenu menu = new DealerMenu();
+                                dispose();
                             }
-
-                            if(A instanceof Mechanic){
-                                MechanicMenu menu = new MechanicMenu();
-                            }
-                            dispose();
 
 
                         } else {

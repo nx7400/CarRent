@@ -75,7 +75,7 @@ public class AddVehicleToCustomer extends JFrame implements ActionListener {
 
             InvoiceControler ic = new InvoiceControler();
             String rentTime = textFieldNumberOfDays.getText();
-            Pattern rentTimePattern = Pattern.compile("[1-9]+[0-9]*");
+            Pattern rentTimePattern = Pattern.compile("[1-9][0-9]*");
             Matcher rentTimeMatcher = rentTimePattern.matcher(rentTime);
 
             if(rentTimeMatcher.matches()){

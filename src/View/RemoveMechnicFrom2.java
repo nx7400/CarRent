@@ -1,5 +1,6 @@
 package View;
 
+import Controler.PersonControler;
 import Model.DataBase;
 import Model.Employee;
 
@@ -16,8 +17,11 @@ public class RemoveMechnicFrom2 extends JFrame implements ActionListener {
     private JComboBox comboBoxRemoveMechanic;
     private JButton buttonRemove;
     private JButton buttonCancel;
+    private JFrame statusDialogWindow;
 
-    private int removeMechanicId;
+    PersonControler pc = new PersonControler();
+
+    private int IdMechanicToRemove = -1;
 
     public RemoveMechnicFrom2(){
 
@@ -28,17 +32,11 @@ public class RemoveMechnicFrom2 extends JFrame implements ActionListener {
         setLocation(50,50);
         setContentPane(panel1);
 
-        DataBase B = new DataBase();
-
-        List<Employee> mechanicList = B.selectMechanic();
-
-        addDealersToComboBox(mechanicList);
+        addDealersToComboBox(pc.getMechanicFromDataBase());
 
         buttonRemove.addActionListener(this);
         buttonCancel.addActionListener(this);
         comboBoxRemoveMechanic.addActionListener(this);
-
-
 
 
     }
@@ -57,12 +55,20 @@ public class RemoveMechnicFrom2 extends JFrame implements ActionListener {
 
         if(source == buttonRemove){
 
-            DataBase B = new DataBase();
+            if(IdMechanicToRemove != -1) {
 
-            if(B.removeMechanic(removeMechanicId)){
-                System.out.println("Poprawne usuniecie sprzedawcy");
-            } else{
-                System.out.println("Blad przy usuwani sprzedawcy");
+                if (pc.removeMechanicFromDataBase(IdMechanicToRemove)) {
+
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Udane usuniecie mechanika z bazy danych");
+
+                } else {
+
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy usuwaniu mechanika z bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+
+            } else {
+
+                JOptionPane.showMessageDialog(statusDialogWindow, "Nie wybrano mechanika do usniecia", "Error", JOptionPane.ERROR_MESSAGE);
             }
 
 
@@ -73,7 +79,7 @@ public class RemoveMechnicFrom2 extends JFrame implements ActionListener {
         }
 
         if(source == comboBoxRemoveMechanic){
-            removeMechanicId = comboBoxRemoveMechanic.getSelectedIndex() + 1;
+            IdMechanicToRemove = comboBoxRemoveMechanic.getSelectedIndex() + 1;
         }
 
     }

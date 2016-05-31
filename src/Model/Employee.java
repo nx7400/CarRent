@@ -21,6 +21,12 @@ public abstract class Employee extends Person {
         return login1+login2+idEmployee;
     }
 
+    public void createLogin(){
+
+        this.login = this.name.substring(0,3)+this.lastName.substring(0,3)+this.idEmployee;
+
+    }
+
     protected static String hashPassword(String password){
 
         String hashed = BCrypt.hashpw(password,BCrypt.gensalt());
@@ -41,7 +47,7 @@ public abstract class Employee extends Person {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = hashPassword(password);
     }
 
     public String getLogin() {

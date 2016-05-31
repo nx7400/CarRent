@@ -1,5 +1,6 @@
 package View;
 
+import Controler.BuildingControler;
 import Model.DataBase;
 import Model.Rental;
 
@@ -17,6 +18,8 @@ public class ShowRentalsForm extends JFrame {
     private JButton buttonReturn;
     private DefaultListModel listModel;
 
+    BuildingControler bc = new BuildingControler();
+
     public ShowRentalsForm() {
 
         super("Lista wypożyczalni");
@@ -26,9 +29,7 @@ public class ShowRentalsForm extends JFrame {
         setLocation(50,50);
 
 
-        DataBase B = new DataBase();
-
-        List<Rental> rentalsList = B.selectRental();
+        List<Rental> rentalsList = bc.getRentalFromDataBase();
 
 
         listModel = new DefaultListModel();

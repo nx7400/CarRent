@@ -1,6 +1,7 @@
 package Controler;
 
 
+import Model.Car;
 import Model.DataBase;
 import Model.Vehicle;
 
@@ -24,8 +25,7 @@ public class VehicleControler {
 
     public List<Vehicle> getVehiclesFromDataBase(){
 
-        List<Vehicle> vehicleList;
-        return vehicleList = B.selectVehicle();
+       return B.selectVehicle();
     }
 
     public Vehicle getVehicleById(int idSelected){

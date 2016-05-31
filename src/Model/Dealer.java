@@ -9,6 +9,10 @@ public class Dealer extends Employee {
 
     public Dealer(){
 
+        DataBase B = new DataBase();
+        counter++;
+        this.idEmployee = B.getNumberofDealers() + 1;
+
     }
 
     public Dealer(int idRental, String password, String name, String lastName, String address, String email, String pesel, String phoneNumber){

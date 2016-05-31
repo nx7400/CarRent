@@ -49,6 +49,24 @@ public class PersonControler {
         return B.selectDealer();
     }
 
+    public boolean removeDealerFromDataBase(int IdDealerToRemove){
+
+        return B.removeDealer(IdDealerToRemove);
+    }
+
+    public boolean addMechanicToDataBase(Mechanic M){
+        return B.insertMechanic(M);
+    }
+
+    public List<Employee> getMechanicFromDataBase(){
+        return B.selectMechanic();
+    }
+
+    public boolean removeMechanicFromDataBase(int IdMechanicToRemove){
+
+        return B.removeMechanic(IdMechanicToRemove);
+    }
+
 
 
 }

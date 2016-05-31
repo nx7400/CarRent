@@ -5,9 +5,5 @@
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
     </data-source>
-    <data-source name="MySQL - CarRent@localhost" uuid="51b5e0c1-3033-4e9b-a65e-89d43f43b7e5">
-      <secret-storage>memory</secret-storage>
-      <user-name>root</user-name>
-    </data-source>
   </component>
 </project>

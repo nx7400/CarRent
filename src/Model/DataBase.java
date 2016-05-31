@@ -168,52 +168,17 @@ public class DataBase {
     public boolean insertVehicle(Vehicle V){
 
         try{
-            PreparedStatement prepStat = conn.prepareStatement("INSERT INTO Vehicle VALUES (NULL,?,?,?,?,?,?,?)");
+            PreparedStatement prepStat = conn.prepareStatement("INSERT INTO Vehicle VALUES (NULL,?,?,?,?,?,?)");
             prepStat.setString(1,V.brand);
             prepStat.setString(2,V.model);
             prepStat.setInt(3,V.idWorkShop);
             prepStat.setInt(4,V.idRental);
             prepStat.setDouble(5,V.pricePerDay);
             prepStat.setInt(6,V.itRent);
-            if(V instanceof Car){
-                prepStat.setString(7,"Samochod");
-            } else{
-                prepStat.setString(7,"Motocykl");
-            }
+
             System.out.println("Wstawiono pojazd");
         } catch (SQLException e){
             System.err.println("Blad przy wstawianiu pojazdu");
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-    }
-
-    public boolean insertFault(Fault F){
-
-        try{
-            PreparedStatement prepStat = conn.prepareStatement("INSERT INTO Fault VALUES (NULL,?,?,?)");
-            prepStat.setInt(1,F.getIdVehicle());
-            prepStat.setString(2,F.getDescription());
-            prepStat.setDouble(3,F.getCost());
-        } catch (SQLException e){
-            System.err.println("Blad przy wstawianiu usterki");
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
-    }
-
-    public boolean insertInspection(Inspection I){
-
-        try{
-            PreparedStatement prepStat = conn.prepareStatement("INSERT INTO Inspection VALUES (NULL,?,?)");
-            prepStat.setInt(1,I.getIdVehicle());
-            prepStat.setString(2,I.getDescription());
-        } catch (SQLException e){
-            System.err.println("Blad przy wstawianiu przegladu");
             e.printStackTrace();
             return false;
         }
@@ -445,7 +410,7 @@ public class DataBase {
             ResultSet result = stat.executeQuery("SELECT * FROM Vehicle");
             int idVehicle, idWorkShop, idRental, itRent;
             double pricePerDay;
-            String brand, model, type;
+            String brand, model;
             while(result.next()){
                 idVehicle = result.getInt("IDVehicle");
                 idRental = result.getInt("IDRental");
@@ -454,11 +419,9 @@ public class DataBase {
                 pricePerDay = result.getDouble("PricePerDay");
                 brand = result.getString("Brand");
                 model = result.getString("Model");
-                type = result.getString("Type");
-                if(type.equals("Car"))
-                    vehicleList.add(new Car(idVehicle, brand, model, idWorkShop, idRental, pricePerDay, itRent));
-                if(type.equals("MotorBike"))
-                    vehicleList.add(new MotorBike(idVehicle, brand, model, idWorkShop, idRental, pricePerDay, itRent));
+
+                vehicleList.add(new Car(idVehicle, brand, model, idWorkShop, idRental, pricePerDay, itRent));
+
 
             }
         } catch (SQLException e){
@@ -617,6 +580,8 @@ public class DataBase {
         return numberOfInvoice;
 
     }
+//////////////////////////////////////REMOVE_BLOCK///////////////////////////////////////////////////////////////////////
+
 
     public boolean removeDealer(int id){
 
@@ -626,7 +591,7 @@ public class DataBase {
             prepStat.execute();
 
         } catch (SQLException e){
-            System.err.println("Blad przy wstawianiu usterki");
+            System.err.println("Blad przy usuwaniu sprzedawcy");
             e.printStackTrace();
             return false;
         }
@@ -642,13 +607,62 @@ public class DataBase {
             prepStat.execute();
 
         } catch (SQLException e){
-            System.err.println("Blad przy wstawianiu usterki");
+            System.err.println("Blad przy usuwaniu mechanika");
             e.printStackTrace();
             return false;
         }
 
         return true;
     }
+
+    public boolean removeVehicle(int id){
+
+        try{
+            PreparedStatement prepStat = conn.prepareStatement("DELETE FROM Vehicle WHERE IDVehicle = ?");
+            prepStat.setInt(1,id);
+            prepStat.execute();
+
+        } catch (SQLException e){
+            System.err.println("Blad przy usuwaniu pojazdu");
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean removeWorkShop(int id){
+
+        try{
+            PreparedStatement prepStat = conn.prepareStatement("DELETE FROM WorkShop WHERE IDWorkShop = ?");
+            prepStat.setInt(1,id);
+            prepStat.execute();
+
+        } catch (SQLException e){
+            System.err.println("Blad przy usuwaniu warsztatu ");
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean removeRental(int id){
+
+        try{
+            PreparedStatement prepStat = conn.prepareStatement("DELETE FROM Rental WHERE IDRental = ?");
+            prepStat.setInt(1,id);
+            prepStat.execute();
+
+        } catch (SQLException e){
+            System.err.println("Blad przy usuwaniu wypożyczalni ");
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
 
 
 

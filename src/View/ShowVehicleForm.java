@@ -1,9 +1,9 @@
 package View;
 
-import Controler.PersonControler;
+import Controler.VehicleControler;
 import Model.DataBase;
 import Model.Employee;
-import Model.Person;
+import Model.Vehicle;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -11,41 +11,41 @@ import java.awt.event.ActionListener;
 import java.util.List;
 
 /**
- * Created by Michał on 21.04.2016.
+ * Created by Michał on 31.05.2016.
  */
-public class ShowMechanicsForm extends JFrame{
+public class ShowVehicleForm extends JFrame {
     private JPanel panel1;
-    private JList listOfDealers;
+    private JList listOfVehicle;
     private JButton buttonReturn;
     private DefaultListModel listModel;
 
-    PersonControler pc = new PersonControler();
+    VehicleControler vc = new VehicleControler();
 
+    public ShowVehicleForm(){
 
-    public ShowMechanicsForm() {
         super("Lista klientow");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
-        setSize(640, 480);
-        setLocation(50, 50);
+        setSize(640,480);
+        setLocation(50,50);
 
 
-        List<Employee> mechanicsList = pc.getMechanicFromDataBase();
+        List<Vehicle> vehicleList = vc.getVehiclesFromDataBase();
 
 
         listModel = new DefaultListModel();
 
-        for (int i = 0; i < mechanicsList.size(); i++) {
+        for(int i = 0; i<vehicleList.size(); i++){
 
-            listModel.addElement(mechanicsList.get(i).toString());
+            listModel.addElement(vehicleList.get(i).toString());
         }
 
 
-        listOfDealers.setModel(listModel);
+        listOfVehicle.setModel(listModel);
 
-        listOfDealers.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        listOfDealers.setSelectedIndex(0);
-        listOfDealers.setVisibleRowCount(5);
+        listOfVehicle.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        listOfVehicle.setSelectedIndex(0);
+        listOfVehicle.setVisibleRowCount(5);
         //JScrollPane listScrollPane = new JScrollPane(list1);
         //list1.updateUI();
 
@@ -58,6 +58,4 @@ public class ShowMechanicsForm extends JFrame{
             }
         });
     }
-
-
 }

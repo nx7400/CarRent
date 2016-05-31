@@ -1,5 +1,6 @@
 package View;
 
+import Controler.PersonControler;
 import Model.DataBase;
 import Model.Employee;
 
@@ -17,6 +18,8 @@ public class ShowDealersForm extends JFrame {
     private JButton buttonReturn;
     private DefaultListModel listModel;
 
+    PersonControler pc = new PersonControler();
+
     public ShowDealersForm(){
 
         super("Lista klientow");
@@ -26,9 +29,7 @@ public class ShowDealersForm extends JFrame {
         setLocation(50,50);
 
 
-        DataBase B = new DataBase();
-
-        List<Employee> dealersList = B.selectDealer();
+        List<Employee> dealersList = pc.getDealersFromDataBase();
 
 
         listModel = new DefaultListModel();

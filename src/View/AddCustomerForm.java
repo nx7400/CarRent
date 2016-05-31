@@ -110,31 +110,37 @@ public class AddCustomerForm extends JFrame implements ActionListener {
 
             }
 
-            //TODO boolean for all matcher if all is true -> add customer to data Base
+            if(nameMatcher.matches() && lastNameMatcher.matches() && addressMatcher.matches() && emailMatcher.matches() && peselMatcher.matches() && phoneNumberMatcher.matches() ){
 
-            PersonControler pc = new PersonControler();
+                PersonControler pc = new PersonControler();
 
-            if(pc.addCustomerToDataBase(C1)){
+                if(pc.addCustomerToDataBase(C1)){
 
-                JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie klienta do bazy danych");
+                    JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie klienta do bazy danych");
 
-            } else {
-                JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy dodawaniu klienta do bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy dodawaniu klienta do bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+
+
+                Object[] options = {"Dodaj pojazd do klienta","Wróć do menu"};
+
+                int c = JOptionPane.showOptionDialog(dialogWindow,"Co chcesz zrobić dalej?","Wybierz opcje",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);
+
+                switch (c){
+                    case 0:
+                        AddVehicleToCustomer addVehicleToCustomer = new AddVehicleToCustomer(C1);
+                        break;
+                    case 1:
+                        dispose();
+                        break;
+                }
+
+
             }
 
 
-            Object[] options = {"Dodaj pojazd do klienta","Wróć do menu"};
 
-            int c = JOptionPane.showOptionDialog(dialogWindow,"Co chcesz zrobić dalej?","Wybierz opcje",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[1]);
-
-            switch (c){
-                case 0:
-                    AddVehicleToCustomer addVehicleToCustomer = new AddVehicleToCustomer(C1);
-                    break;
-                case 1:
-                    dispose();
-                    break;
-            }
 
         }
 

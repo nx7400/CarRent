@@ -1,11 +1,14 @@
 package View;
 
+import Controler.BuildingControler;
 import Model.DataBase;
 import Model.WorkShop;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Michał on 11.03.2016.
@@ -41,17 +44,42 @@ public class AddWorkShopForm extends JFrame implements ActionListener {
             String city = textFieldCity.getText();
             String address = textFieldaddress.getText();
 
-            WorkShop W = new WorkShop(city,address);
+            WorkShop W = new WorkShop();
 
-            DataBase B = new DataBase();
 
-            if(B.insertWorkShop(W)){
-                JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie warsztatu do bazy danych");
+            Pattern cityPattern = Pattern.compile("[A-Z]([a-z])+");
+            Matcher cityMatcher = cityPattern.matcher(city);
 
+            if(cityMatcher.matches()){
+
+                W.setCity(city);
             } else {
-                JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy dodawaniu warsztatu do bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+
+                JOptionPane.showMessageDialog(statusDialogWindow, "Błędna nazwa miasta !!! Prawidłowa nazwa miasta zaczyna sie z dużej litery i zawiera tylko litery","Błędny adres", JOptionPane.ERROR_MESSAGE);
             }
 
+            Pattern addressPattern = Pattern.compile("[A-Z]([a-z])+\\s([1-9])+");
+            Matcher addressMatcher = addressPattern.matcher(address);
+
+            if(addressMatcher.matches()){
+                W.setAddress(address);
+            } else {
+
+                JOptionPane.showMessageDialog(statusDialogWindow, "Błędny adres !!! Prawidłowa forma: Ulica nr","Błędny adres", JOptionPane.ERROR_MESSAGE);
+            }
+
+            if(cityMatcher.matches() && addressMatcher.matches()){
+
+                BuildingControler bc = new BuildingControler();
+
+                if(bc.addWorkShopToDataBase(W)){
+                    JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie warsztatu do bazy danych");
+
+                } else {
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy dodawaniu warsztatu do bazy danych", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+
+            }
         }
 
         if(source == buttonCancel){
