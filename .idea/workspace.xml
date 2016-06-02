@@ -2,32 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5e9b6f8-48da-4f4f-8705-96e364e02e4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveVehicleForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveVehicleForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveWrokShopForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveWrokShopForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/ShowVehicleForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/ShowVehicleForm.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CarRent/Admin.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CarRent/Customer.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CarRent/hibernate.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Admin.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Customer.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Fault.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Inspection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/AddAdminForm.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/AddAdminForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/AddCarToExsitingInvoice.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/AddCarToExsitingInvoice.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveAdminForm.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveAdminForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveCustomerForm.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveCustomerForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveInvoiceForm.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/RemoveInvoiceForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/ShowAdminsForm.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/ShowAdminsForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/ShowInvoiceForm.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/ShowInvoiceForm.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/View/MechanicMenu.form" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/View/MechanicMenu.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Car.java" afterPath="$PROJECT_DIR$/src/Model/Car.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controler/InvoiceControler.java" afterPath="$PROJECT_DIR$/src/Controler/InvoiceControler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controler/PersonControler.java" afterPath="$PROJECT_DIR$/src/Controler/PersonControler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controler/VehicleControler.java" afterPath="$PROJECT_DIR$/src/Controler/VehicleControler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Admin.java" afterPath="$PROJECT_DIR$/src/Model/Admin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Customer.java" afterPath="$PROJECT_DIR$/src/Model/Customer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/DataBase.java" afterPath="$PROJECT_DIR$/src/Model/DataBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/MotorBike.java" afterPath="$PROJECT_DIR$/src/Model/MotorBike.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Vehicle.java" afterPath="$PROJECT_DIR$/src/Model/Vehicle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Dealer.java" afterPath="$PROJECT_DIR$/src/Model/Dealer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Invoice.java" afterPath="$PROJECT_DIR$/src/Model/Invoice.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Main.java" afterPath="$PROJECT_DIR$/src/Model/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddCustomerForm.form" afterPath="$PROJECT_DIR$/src/View/AddCustomerForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddCustomerForm.java" afterPath="$PROJECT_DIR$/src/View/AddCustomerForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddDealerForm.form" afterPath="$PROJECT_DIR$/src/View/AddDealerForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddDealerForm.java" afterPath="$PROJECT_DIR$/src/View/AddDealerForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddMechanicForm.form" afterPath="$PROJECT_DIR$/src/View/AddMechanicForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddMechanicForm.java" afterPath="$PROJECT_DIR$/src/View/AddMechanicForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddRentalForm.form" afterPath="$PROJECT_DIR$/src/View/AddRentalForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddVehicleForm.form" afterPath="$PROJECT_DIR$/src/View/AddVehicleForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddVehicleForm.java" afterPath="$PROJECT_DIR$/src/View/AddVehicleForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddVehicleToCustomer.form" afterPath="$PROJECT_DIR$/src/View/AddVehicleToCustomer.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddVehicleToCustomer.java" afterPath="$PROJECT_DIR$/src/View/AddVehicleToCustomer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/AddWorkShopForm.form" afterPath="$PROJECT_DIR$/src/View/AddWorkShopForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/DealerMenu.form" afterPath="$PROJECT_DIR$/src/View/DealerMenu.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/DealerMenu.java" afterPath="$PROJECT_DIR$/src/View/DealerMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/LoginForm.form" afterPath="$PROJECT_DIR$/src/View/LoginForm.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/LoginForm.java" afterPath="$PROJECT_DIR$/src/View/LoginForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MenuForm.form" afterPath="$PROJECT_DIR$/src/View/MenuForm.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MenuForm.java" afterPath="$PROJECT_DIR$/src/View/MenuForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/RemoveDealerForm2.form" afterPath="$PROJECT_DIR$/src/View/RemoveDealerForm2.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/RemoveMechnicFrom2.form" afterPath="$PROJECT_DIR$/src/View/RemoveMechnicFrom2.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/RemoveRentalForm.form" afterPath="$PROJECT_DIR$/src/View/RemoveRentalForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/RemoveVehicleForm.form" afterPath="$PROJECT_DIR$/src/View/RemoveVehicleForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/RemoveVehicleForm.java" afterPath="$PROJECT_DIR$/src/View/RemoveVehicleForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/RemoveWrokShopForm.form" afterPath="$PROJECT_DIR$/src/View/RemoveWrokShopForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/ShowDealersForm.form" afterPath="$PROJECT_DIR$/src/View/ShowDealersForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/ShowMechanicsForm.form" afterPath="$PROJECT_DIR$/src/View/ShowMechanicsForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/ShowRentalsForm.form" afterPath="$PROJECT_DIR$/src/View/ShowRentalsForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/ShowVehicleForm.form" afterPath="$PROJECT_DIR$/src/View/ShowVehicleForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/ShowWorkShopsForm.form" afterPath="$PROJECT_DIR$/src/View/ShowWorkShopsForm.form" />
     </list>
     <ignored path="CarRent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,7 +106,38 @@
     <favorites_list name="CarRent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Vehicle" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Vehicle">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Customer">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -96,57 +158,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AddVehicleToCustomer.java" />
-        <option value="$PROJECT_DIR$/src/DataBase.java" />
-        <option value="$PROJECT_DIR$/src/Invoice.java" />
-        <option value="$PROJECT_DIR$/src/Model/Admin.java" />
-        <option value="$PROJECT_DIR$/src/Model/Building.java" />
-        <option value="$PROJECT_DIR$/src/View/AddRentalForm.form" />
-        <option value="$PROJECT_DIR$/src/Model/LogoPanel.java" />
-        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/View/DealerMenu.java" />
-        <option value="$PROJECT_DIR$/src/Controler/InvoiceControler.java" />
+        <option value="$PROJECT_DIR$/src/View/AddVehicleToCustomer.java" />
+        <option value="$PROJECT_DIR$/src/View/AddCustomerForm.java" />
+        <option value="$PROJECT_DIR$/src/View/AddCarToExsitingInvoice.java" />
         <option value="$PROJECT_DIR$/src/Model/Invoice.java" />
-        <option value="$PROJECT_DIR$/src/Model/Main.java" />
         <option value="$PROJECT_DIR$/src/Model/Customer.java" />
-        <option value="$PROJECT_DIR$/src/View/RemoveDealerForm.java" />
-        <option value="$PROJECT_DIR$/src/Model/MotorBike.java" />
-        <option value="$PROJECT_DIR$/src/View/LoginForm.form" />
+        <option value="$PROJECT_DIR$/src/View/ShowInvoiceForm.java" />
         <option value="$PROJECT_DIR$/src/View/LoginForm.java" />
-        <option value="$PROJECT_DIR$/src/View/MenuForm.form" />
+        <option value="$PROJECT_DIR$/src/View/AddMechanicForm.java" />
+        <option value="$PROJECT_DIR$/src/View/ShowWorkShopsForm.form" />
+        <option value="$PROJECT_DIR$/src/View/ShowDealersForm.form" />
         <option value="$PROJECT_DIR$/src/View/ShowVehicleForm.form" />
+        <option value="$PROJECT_DIR$/src/View/ShowRentalsForm.form" />
+        <option value="$PROJECT_DIR$/src/View/ShowMechanicsForm.form" />
+        <option value="$PROJECT_DIR$/src/View/ShowCustomersForm.form" />
+        <option value="$PROJECT_DIR$/src/View/LoginForm.form" />
+        <option value="$PROJECT_DIR$/src/View/AddDealerForm.java" />
+        <option value="$PROJECT_DIR$/src/View/AddAdminForm.java" />
+        <option value="$PROJECT_DIR$/src/View/ShowAdminsForm.java" />
+        <option value="$PROJECT_DIR$/src/Model/Admin.java" />
+        <option value="$PROJECT_DIR$/src/Model/Dealer.java" />
+        <option value="$PROJECT_DIR$/src/View/DealerMenu.java" />
+        <option value="$PROJECT_DIR$/src/View/DealerMenu.form" />
+        <option value="$PROJECT_DIR$/src/Controler/InvoiceControler.java" />
+        <option value="$PROJECT_DIR$/src/View/RemoveInvoiceForm.java" />
+        <option value="$PROJECT_DIR$/src/View/RemoveCustomerForm.java" />
         <option value="$PROJECT_DIR$/src/View/RemoveVehicleForm.java" />
+        <option value="$PROJECT_DIR$/src/Controler/VehicleControler.java" />
+        <option value="$PROJECT_DIR$/src/Model/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/Controler/PersonControler.java" />
+        <option value="$PROJECT_DIR$/src/View/RemoveAdminForm.java" />
+        <option value="$PROJECT_DIR$/src/View/MenuForm.form" />
+        <option value="$PROJECT_DIR$/src/View/MenuForm.java" />
+        <option value="$PROJECT_DIR$/src/View/AddAdminForm.form" />
+        <option value="$PROJECT_DIR$/src/View/AddCarToExsitingInvoice.form" />
+        <option value="$PROJECT_DIR$/src/View/AddCustomerForm.form" />
+        <option value="$PROJECT_DIR$/src/View/AddDealerForm.form" />
+        <option value="$PROJECT_DIR$/src/View/AddMechanicForm.form" />
+        <option value="$PROJECT_DIR$/src/View/AddRentalForm.form" />
+        <option value="$PROJECT_DIR$/src/View/AddVehicleForm.form" />
+        <option value="$PROJECT_DIR$/src/View/AddVehicleToCustomer.form" />
+        <option value="$PROJECT_DIR$/src/View/AddWorkShopForm.form" />
+        <option value="$PROJECT_DIR$/src/View/RemoveAdminForm.form" />
+        <option value="$PROJECT_DIR$/src/View/RemoveCustomerForm.form" />
+        <option value="$PROJECT_DIR$/src/View/RemoveDealerForm2.form" />
+        <option value="$PROJECT_DIR$/src/View/RemoveInvoiceForm.form" />
+        <option value="$PROJECT_DIR$/src/View/RemoveMechnicFrom2.form" />
+        <option value="$PROJECT_DIR$/src/View/RemoveRentalForm.form" />
         <option value="$PROJECT_DIR$/src/View/RemoveVehicleForm.form" />
         <option value="$PROJECT_DIR$/src/View/RemoveWrokShopForm.form" />
-        <option value="$PROJECT_DIR$/src/View/RemoveRentalForm.form" />
-        <option value="$PROJECT_DIR$/src/View/MenuForm.java" />
-        <option value="$PROJECT_DIR$/src/View/AddCustomerForm.java" />
-        <option value="$PROJECT_DIR$/src/View/AddRentalForm.java" />
-        <option value="$PROJECT_DIR$/src/View/AddWorkShopForm.java" />
-        <option value="$PROJECT_DIR$/src/View/AddVehicleForm.form" />
-        <option value="$PROJECT_DIR$/src/Model/Car.java" />
-        <option value="$PROJECT_DIR$/src/Model/Vehicle.java" />
-        <option value="$PROJECT_DIR$/src/View/AddVehicleToCustomer.java" />
-        <option value="$PROJECT_DIR$/src/View/AddVehicleForm.java" />
-        <option value="$PROJECT_DIR$/src/View/RemoveDealerForm2.java" />
-        <option value="$PROJECT_DIR$/src/Controler/PersonControler.java" />
-        <option value="$PROJECT_DIR$/src/View/RemoveRentalForm.java" />
-        <option value="$PROJECT_DIR$/src/Controler/BuildingControler.java" />
-        <option value="$PROJECT_DIR$/src/View/RemoveWrokShopForm.java" />
-        <option value="$PROJECT_DIR$/src/Model/Dealer.java" />
-        <option value="$PROJECT_DIR$/src/Model/Mechanic.java" />
-        <option value="$PROJECT_DIR$/src/View/RemoveMechnicFrom2.java" />
-        <option value="$PROJECT_DIR$/src/Model/Employee.java" />
-        <option value="$PROJECT_DIR$/src/View/AddMechanicForm.java" />
-        <option value="$PROJECT_DIR$/src/View/AddDealerForm.java" />
-        <option value="$PROJECT_DIR$/src/View/ShowCustomersForm.java" />
-        <option value="$PROJECT_DIR$/src/View/ShowDealersForm.java" />
-        <option value="$PROJECT_DIR$/src/View/ShowMechanicsForm.java" />
-        <option value="$PROJECT_DIR$/src/View/ShowRentalsForm.java" />
-        <option value="$PROJECT_DIR$/src/View/ShowWorkShopsForm.java" />
-        <option value="$PROJECT_DIR$/src/View/ShowVehicleForm.java" />
-        <option value="$PROJECT_DIR$/src/Model/DataBase.java" />
-        <option value="$PROJECT_DIR$/src/Controler/VehicleControler.java" />
+        <option value="$PROJECT_DIR$/src/View/ShowAdminsForm.form" />
+        <option value="$PROJECT_DIR$/src/View/ShowInvoiceForm.form" />
       </list>
     </option>
   </component>
@@ -215,39 +277,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CarRent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="CarRent">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -341,6 +370,39 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Production">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="CarRent">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarRent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -924,11 +986,21 @@
       <workItem from="1464644630421" duration="3678000" />
       <workItem from="1464688999100" duration="40000" />
       <workItem from="1464689097923" duration="27726000" />
+      <workItem from="1464861348906" duration="4937000" />
+      <workItem from="1464866343812" duration="2873000" />
+      <workItem from="1464869241142" duration="61000" />
+      <workItem from="1464869345062" duration="161000" />
+      <workItem from="1464869587402" duration="3980000" />
+      <workItem from="1464876597417" duration="1412000" />
+      <workItem from="1464882817435" duration="1501000" />
+      <workItem from="1464884340685" duration="1429000" />
+      <workItem from="1464887300468" duration="16448000" />
+      <workItem from="1464907345026" duration="3740000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286606000" />
+    <option name="totallyTimeSpent" value="323148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -940,8 +1012,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.07249467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1257" y="149" width="152" height="622" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -951,24 +1023,24 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2521322" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26532888" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2664437" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14658849" sideWeight="0.33009708" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14605543" sideWeight="0.6699029" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2153518" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2153518" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14712153" sideWeight="0.5039019" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3489409" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3478261" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910814" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.07249467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1257" y="149" width="152" height="622" />
@@ -983,14 +1055,14 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3489409" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3478261" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32552955" sideWeight="0.49573562" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30992195" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26532888" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14658849" sideWeight="0.33009708" order="3" side_tool="true" content_ui="tabs" />
@@ -1012,7 +1084,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="48" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1021,161 +1096,42 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Invoice">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/Model/Mechanic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54126984">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controler/InvoiceControler.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Dealer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.055555556">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveDealerForm2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="87" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/LoginForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/LoginForm.java">
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveInvoiceForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72250426">
-          <caret line="98" column="42" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ShowDealersForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ShowVehicleForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveVehicleForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveDealerForm2.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MenuForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveVehicleForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.57698816">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveWrokShopForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveRentalForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MenuForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.17935702">
-          <caret line="119" column="67" selection-start-line="119" selection-start-column="67" selection-end-line="119" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/AddCustomerForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4094756">
-          <caret line="114" column="48" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Admin">
-      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Fault">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Customer">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/AddWorkShopForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5820643">
-          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/AddRentalForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34517765">
-          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="80" selection-end-column="13" />
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1185,67 +1141,164 @@
     <entry file="file://$PROJECT_DIR$/src/Model/Vehicle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/AddVehicleForm.java">
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveRentalForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5177665">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.026984127">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Car.java">
+    <entry file="file://$PROJECT_DIR$/src/View/ShowAdminsForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49238577">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/AddVehicleForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Dealer">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/AddVehicleToCustomer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.15059222">
-          <caret line="75" column="57" selection-start-line="75" selection-start-column="57" selection-end-line="75" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.64761907">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveDealerForm2.java">
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveWrokShopForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16582064">
-          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="72" selection-end-column="13" />
+        <state vertical-scroll-proportion="-0.053968254">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveWrokShopForm.java">
+    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Invoice_Vehicle">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Invoice">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/sqlite_sequence">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5245347">
-          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
+          <folding>
+            <element signature="e#17168#17177#0" expanded="true" />
+            <marker date="1464906966817" expanded="true" signature="1393:1439" placeholder="INSERT INTO Customer... " />
+            <marker date="1464906966817" expanded="true" signature="2059:2106" placeholder="INSERT INTO Admin... " />
+            <marker date="1464906966817" expanded="true" signature="2816:2866" placeholder="INSERT INTO Dealer... " />
+            <marker date="1464906966817" expanded="true" signature="3632:3684" placeholder="INSERT INTO Mechanic... " />
+            <marker date="1464906966817" expanded="true" signature="4451:4489" placeholder="INSERT INTO WorkShop... " />
+            <marker date="1464906966817" expanded="true" signature="4931:4967" placeholder="INSERT INTO Rental... " />
+            <marker date="1464906966817" expanded="true" signature="5414:5460" placeholder="INSERT INTO Vehicle... " />
+            <marker date="1464906966817" expanded="true" signature="6166:6201" placeholder="INSERT INTO Invoice... " />
+            <marker date="1464906966817" expanded="true" signature="6645:6687" placeholder="INSERT INTO Invoice_Vehicle... " />
+            <marker date="1464906966817" expanded="true" signature="7199:7248" placeholder="UPDATE Vehic... " />
+            <marker date="1464906966817" expanded="true" signature="7206:7229" placeholder="INSERT INTO Invoice... " />
+            <marker date="1464906966817" expanded="true" signature="7853:7872" placeholder="SELECT * FRO... Admin" />
+            <marker date="1464906966817" expanded="true" signature="9079:9101" placeholder="SELECT * FRO... Mechanic" />
+            <marker date="1464906966817" expanded="true" signature="10411:10431" placeholder="SELECT * FRO... Dealer" />
+            <marker date="1464906966817" expanded="true" signature="11717:11739" placeholder="SELECT * FRO... Customer" />
+            <marker date="1464906966817" expanded="true" signature="12817:12837" placeholder="SELECT * FRO... Rental" />
+            <marker date="1464906966817" expanded="true" signature="13630:13652" placeholder="SELECT * FRO... WorkShop" />
+            <marker date="1464906966817" expanded="true" signature="14448:14469" placeholder="SELECT * FRO... Vehicle" />
+            <marker date="1464906966817" expanded="true" signature="15573:15587" placeholder="SELECT * FRO... Vehicle" />
+            <marker date="1464906966817" expanded="true" signature="15573:15594" placeholder="SELECT * FRO... Invoice" />
+            <marker date="1464906966817" expanded="true" signature="16395:16415" placeholder="SELECT * FRO... Invoice" />
+            <marker date="1464906966817" expanded="true" signature="16395:16424" placeholder="SELECT * FRO... Invoice_Vehicle" />
+            <marker date="1464906966817" expanded="true" signature="17245:17266" placeholder="SELECT * FRO... Invoice" />
+            <marker date="1464906966817" expanded="true" signature="17245:17274" placeholder="SELECT * FRO... Invoice_Vehicle" />
+            <marker date="1464906966817" expanded="true" signature="18067:18138" placeholder="SELECT IDCus... Customer" />
+            <marker date="1464906966817" expanded="true" signature="18662:18725" placeholder="SELECT IDDea... Dealer" />
+            <marker date="1464906966817" expanded="true" signature="19172:19231" placeholder="SELECT IDAdm... Admin" />
+            <marker date="1464906966817" expanded="true" signature="19677:19748" placeholder="SELECT IDMec... Mechanic" />
+            <marker date="1464906966817" expanded="true" signature="20202:20265" placeholder="SELECT IDRen... Rental" />
+            <marker date="1464906966817" expanded="true" signature="20719:20790" placeholder="SELECT IDWor... WorkShop" />
+            <marker date="1464906966817" expanded="true" signature="21245:21312" placeholder="SELECT IDVeh... Vehicle" />
+            <marker date="1464906966817" expanded="true" signature="21761:21827" placeholder="SELECT IDInv... Invoice" />
+            <marker date="1464906966817" expanded="true" signature="22380:22421" placeholder="DELETE FROM " />
+            <marker date="1464906966817" expanded="true" signature="22806:22843" placeholder="DELETE FROM " />
+            <marker date="1464906966817" expanded="true" signature="23233:23274" placeholder="DELETE FROM " />
+            <marker date="1464906966817" expanded="true" signature="23662:23701" placeholder="DELETE FROM " />
+            <marker date="1464906966817" expanded="true" signature="24088:24129" placeholder="DELETE FROM " />
+            <marker date="1464906966817" expanded="true" signature="24517:24554" placeholder="DELETE FROM " />
+            <marker date="1464906966817" expanded="true" signature="24946:24985" placeholder="DELETE FROM " />
+            <marker date="1464906966817" expanded="true" signature="25385:25432" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controler/InvoiceControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AddCarToExsitingInvoice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46190476">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controler/VehicleControler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7031746">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveVehicleForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026984127">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveAdminForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3492064">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1254,233 +1307,204 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controler/PersonControler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6903553">
-          <caret line="66" column="52" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.51428574">
+          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Person.java">
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveCustomerForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.40270728">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Mechanic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25888324">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveRentalForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9424704">
-          <caret line="73" column="91" selection-start-line="73" selection-start-column="91" selection-end-line="73" selection-end-column="91" />
+        <state vertical-scroll-proportion="0.1904762">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="87" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Dealer.java">
+    <entry file="file://$PROJECT_DIR$/src/View/MenuForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25888324">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/WorkShop">
-      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Mechanic">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RemoveMechnicFrom2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25888324">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <caret line="146" column="64" selection-start-line="146" selection-start-column="64" selection-end-line="146" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/AddDealerForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9780034">
-          <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6615905">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/AddMechanicForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2876481">
-          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ShowMechanicsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5177665">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ShowDealersForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56852794">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ShowCustomersForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7986464">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ShowWorkShopsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34517765">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ShowRentalsForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5752961">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logoRent.PNG">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/src/View/MenuForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ShowVehicleForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16582064">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/View/AddAdminForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controler/BuildingControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89170897">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controler/VehicleControler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53882724">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/DataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48494452">
-          <caret line="170" column="74" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
-          <folding>
-            <marker date="1464735144237" expanded="true" signature="1331:1377" placeholder="INSERT INTO Customer... " />
-            <marker date="1464735144237" expanded="true" signature="1996:2043" placeholder="INSERT INTO Admin... " />
-            <marker date="1464735144237" expanded="true" signature="2752:2802" placeholder="INSERT INTO Dealer... " />
-            <marker date="1464735144237" expanded="true" signature="3567:3619" placeholder="INSERT INTO Mechanic... " />
-            <marker date="1464735144237" expanded="true" signature="4385:4423" placeholder="INSERT INTO WorkShop... " />
-            <marker date="1464735144237" expanded="true" signature="4865:4901" placeholder="INSERT INTO Rental... " />
-            <marker date="1464735144237" expanded="true" signature="5348:5393" placeholder="INSERT INTO Vehicle... " />
-            <marker date="1464735144237" expanded="true" signature="6034:6071" placeholder="INSERT INTO Invoice... " />
-            <marker date="1464735144237" expanded="true" signature="6513:6553" placeholder="INSERT INTO Invoice_Vehicle... " />
-            <marker date="1464735144237" expanded="true" signature="7150:7169" placeholder="SELECT * FRO... Admin" />
-            <marker date="1464735144237" expanded="true" signature="8376:8398" placeholder="SELECT * FRO... Mechanic" />
-            <marker date="1464735144237" expanded="true" signature="9708:9728" placeholder="SELECT * FRO... Dealer" />
-            <marker date="1464735144237" expanded="true" signature="11014:11036" placeholder="SELECT * FRO... Customer" />
-            <marker date="1464735144237" expanded="true" signature="12114:12134" placeholder="SELECT * FRO... Rental" />
-            <marker date="1464735144237" expanded="true" signature="12927:12949" placeholder="SELECT * FRO... WorkShop" />
-            <marker date="1464735144237" expanded="true" signature="13745:13766" placeholder="SELECT * FRO... Vehicle" />
-            <marker date="1464735144237" expanded="true" signature="14959:15030" placeholder="SELECT IDCus... Customer" />
-            <marker date="1464735144237" expanded="true" signature="15554:15617" placeholder="SELECT IDDea... Dealer" />
-            <marker date="1464735144237" expanded="true" signature="16064:16123" placeholder="SELECT IDAdm... Admin" />
-            <marker date="1464735144237" expanded="true" signature="16569:16640" placeholder="SELECT IDMec... Mechanic" />
-            <marker date="1464735144237" expanded="true" signature="17094:17157" placeholder="SELECT IDRen... Rental" />
-            <marker date="1464735144237" expanded="true" signature="17611:17682" placeholder="SELECT IDWor... WorkShop" />
-            <marker date="1464735144237" expanded="true" signature="18137:18204" placeholder="SELECT IDVeh... Vehicle" />
-            <marker date="1464735144237" expanded="true" signature="18653:18719" placeholder="SELECT IDInv... Invoice" />
-            <marker date="1464735144237" expanded="true" signature="19271:19308" placeholder="DELETE FROM " />
-            <marker date="1464735144237" expanded="true" signature="19698:19739" placeholder="DELETE FROM " />
-            <marker date="1464735144237" expanded="true" signature="20127:20166" placeholder="DELETE FROM " />
-            <marker date="1464735144237" expanded="true" signature="20553:20594" placeholder="DELETE FROM " />
-            <marker date="1464735144237" expanded="true" signature="20982:21019" placeholder="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Vehicle">
+    <entry file="file://$PROJECT_DIR$/src/View/AddCarToExsitingInvoice.form">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AddCustomerForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AddDealerForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AddMechanicForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AddRentalForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AddVehicleForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AddVehicleToCustomer.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/AddWorkShopForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/DealerMenu.form">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/LoginForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveAdminForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveCustomerForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveDealerForm2.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveInvoiceForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveMechnicFrom2.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveRentalForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ShowDealersForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ShowInvoiceForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ShowMechanicsForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ShowRentalsForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ShowVehicleForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ShowWorkShopsForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ShowCustomersForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/ShowAdminsForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveWrokShopForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RemoveVehicleForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Vehicle">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/1bed6663/0ec3aefa-f2a6-4f5e-85ca-f681a4d311ad/Customer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

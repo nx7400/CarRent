@@ -54,7 +54,7 @@
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Anuluj"/>
+          <text value="Wróć"/>
         </properties>
       </component>
       <component id="41a22" class="javax.swing.JLabel">

@@ -36,7 +36,7 @@ public class AddMechanicForm extends JFrame implements ActionListener {
 
     public AddMechanicForm(){
 
-        super("Dodaj Klienta");
+        super("Dodaj Mechanika");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
         setSize(640,480);

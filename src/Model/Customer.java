@@ -47,8 +47,9 @@ public class Customer extends Person {
 
     }
 
-    public void addInvoiceToCustomer(){
-        //dodawanie kolejnej faktur do listy faktur klienta
+    public String showCustomerInInvoice(){
+        String result = "\nImie, Nazwisko: " + this.name + ", " + this.lastName + "\nId: " + this.idCustomer + "\nAdres: " + this. address + "\nPESEL: " + this.pesel + "\nEmail:" + this.email + "\nNr Telefonu: " + this.phoneNumber;
+        return result;
     }
 
     public String toString(){

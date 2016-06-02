@@ -1,5 +1,6 @@
 package View;
 
+import Controler.VehicleControler;
 import Model.DataBase;
 import Model.Employee;
 import Model.Vehicle;
@@ -17,8 +18,11 @@ public class RemoveVehicleForm extends JFrame implements ActionListener {
     private JComboBox comboBoxRemoveVehicle;
     private JButton buttonRemove;
     private JButton buttonCancel;
+    private JFrame statusDialogWindow;
 
-    private int removeVehicleId;
+    VehicleControler vc = new VehicleControler();
+
+    private int IdVehicleToRemove = -1;
 
     public RemoveVehicleForm(){
 
@@ -29,17 +33,11 @@ public class RemoveVehicleForm extends JFrame implements ActionListener {
         setLocation(50,50);
         setContentPane(panel1);
 
-        DataBase B = new DataBase();
-
-        List<Vehicle> vehicleList = B.selectVehicle();
-
-        addVehicleToComboBox(vehicleList);
+        addVehicleToComboBox(vc.getVehiclesFromDataBase());
 
         buttonRemove.addActionListener(this);
         buttonCancel.addActionListener(this);
         comboBoxRemoveVehicle.addActionListener(this);
-
-
 
 
     }
@@ -58,14 +56,21 @@ public class RemoveVehicleForm extends JFrame implements ActionListener {
 
         if(source == buttonRemove){
 
-            DataBase B = new DataBase();
+            if(IdVehicleToRemove != -1) {
 
-            if(B.removeVehicle(removeVehicleId)){
-                System.out.println("Poprawne usuniecie pojazdu");
-            } else{
-                System.out.println("Blad przy usuwaniu pojazdu");
+                if (vc.removeVehicleFromDataBase(IdVehicleToRemove)) {
+
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Udane usuniecie pojazdu z bazy danych");
+
+                } else {
+
+                    JOptionPane.showMessageDialog(statusDialogWindow, "Blad przy usuwaniu pojazdu z bazy danych (Sprawdź czy wszystkie faktury z wybranym pojazdem zostały usuniete)", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+
+            } else {
+
+                JOptionPane.showMessageDialog(statusDialogWindow, "Nie wybrano klienta do usniecia", "Error", JOptionPane.ERROR_MESSAGE);
             }
-
 
 
         }
@@ -75,7 +80,7 @@ public class RemoveVehicleForm extends JFrame implements ActionListener {
         }
 
         if(source == comboBoxRemoveVehicle){
-            removeVehicleId = comboBoxRemoveVehicle.getSelectedIndex() + 1;
+            IdVehicleToRemove = comboBoxRemoveVehicle.getSelectedIndex() + 1;
         }
 
     }

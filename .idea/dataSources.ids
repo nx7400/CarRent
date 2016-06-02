@@ -39,28 +39,15 @@
       <column name="PhoneNumber" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <primary-key columns="iddealer"/>
     </table>
-    <table name="Fault" schema="" catalog="" type="TABLE">
-      <column name="IDFault" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="IDVehicle" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="Description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="Cost" sqlType="REAL" precision="0" scale="-1" nullable="true" jdbcType="6"/>
-      <primary-key columns="idfault"/>
-    </table>
-    <table name="Inspection" schema="" catalog="" type="TABLE">
-      <column name="IDInspection" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="IDVehicle" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="Description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <primary-key columns="idinspection"/>
-    </table>
     <table name="Invoice" schema="" catalog="" type="TABLE">
       <column name="IDInvoice" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="IDCustomer" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="RentTime" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <primary-key columns="idinvoice"/>
     </table>
     <table name="Invoice_Vehicle" schema="" catalog="" type="TABLE">
       <column name="IDInvoice" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="IDVehicle" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="RentTime" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <primary-key columns="idvehicle"/>
     </table>
     <table name="Mechanic" schema="" catalog="" type="TABLE">
@@ -90,7 +77,6 @@
       <column name="IDRental" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="PricePerDay" sqlType="REAL" precision="0" scale="-1" nullable="true" jdbcType="6"/>
       <column name="ItRent" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="Type" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <primary-key columns="idvehicle"/>
     </table>
     <table name="WorkShop" schema="" catalog="" type="TABLE">

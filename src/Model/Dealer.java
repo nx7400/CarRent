@@ -47,7 +47,7 @@ public class Dealer extends Employee {
     }
 
     public String toString(){
-        String result = "Id: " + this.idEmployee + " login:" + this.login + ", " + this.name + ", " + this.lastName;
+        String result = "Id: " + this.idEmployee + " login: " + this.login + ", " + this.name + ", " + this.lastName;
         return result;
     }
 

@@ -79,6 +79,7 @@ public class LoginForm extends JFrame {
                 String getLogin = textField1.getText();
                 String getPass = passwordField1.getText();
 
+                boolean signInGood = false;
 
 
                 for (Employee A : employeesList) {
@@ -88,6 +89,7 @@ public class LoginForm extends JFrame {
                         if (BCrypt.checkpw(getPass, A.getPassword())) {
                             System.out.println("test pass good");
                             JOptionPane.showMessageDialog(testLoginAndPasswordDialogWinodow, "Udane logowanie");
+                            signInGood = true;
 
                             if(A instanceof Admin){
                                 MenuForm menu = new MenuForm();
@@ -100,16 +102,13 @@ public class LoginForm extends JFrame {
                             }
 
 
-                        } else {
-
-                            System.out.println("test pass wrong");
-                            //JOptionPane.showMessageDialog(testLoginAndPasswordDialogWinodow, "Logowanie nie powiodlo sie sprobuj ponownie");
                         }
 
                     }
                 }
 
-                //JOptionPane.showMessageDialog(testLoginAndPasswordDialogWinodow, "Logowanie nie powiodlo sie sprobuj ponownie");
+                if(!signInGood)
+                    JOptionPane.showMessageDialog(testLoginAndPasswordDialogWinodow, "Logowanie nie powiodlo sie sprobuj ponownie");
 
             }
 

@@ -134,7 +134,7 @@ public class AddVehicleForm extends JFrame implements ActionListener {
             }
 
 
-            if (brandMatcher.matches() && (modelMatcher1.matches() || modelMatcher2.matches())) {
+            if (brandMatcher.matches() && (modelMatcher1.matches() || modelMatcher2.matches()) && pricePerDayMatcher.matches()) {
 
                 VehicleControler vc = new VehicleControler();
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.AddDealerForm">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.AddAdminForm">
   <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="115f1" binding="panel1" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="a4759" binding="panel1" layout-manager="GridLayoutManager" row-count="9" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -16,7 +16,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="61cec" class="javax.swing.JTextField" binding="textFieldName">
+          <component id="87553" class="javax.swing.JTextField" binding="textFieldName">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -26,7 +26,7 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="e3613" class="javax.swing.JLabel">
+          <component id="a1436" class="javax.swing.JLabel">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -34,7 +34,7 @@
               <text value="Nazwisko "/>
             </properties>
           </component>
-          <component id="9b8da" class="javax.swing.JLabel">
+          <component id="30028" class="javax.swing.JLabel">
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -42,7 +42,7 @@
               <text value="Adres"/>
             </properties>
           </component>
-          <component id="382af" class="javax.swing.JTextField" binding="textFieldLastName">
+          <component id="a22f0" class="javax.swing.JTextField" binding="textFieldLastName">
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -50,7 +50,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="3159b" class="javax.swing.JLabel">
+          <component id="525c" class="javax.swing.JLabel">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -58,7 +58,7 @@
               <text value="Emial"/>
             </properties>
           </component>
-          <component id="85b5" class="javax.swing.JTextField" binding="textFieldAdress">
+          <component id="f4c33" class="javax.swing.JTextField" binding="textFieldAdress">
             <constraints>
               <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -66,7 +66,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="2b045" class="javax.swing.JLabel">
+          <component id="78576" class="javax.swing.JLabel">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -74,7 +74,7 @@
               <text value="PESEL"/>
             </properties>
           </component>
-          <component id="6d746" class="javax.swing.JTextField" binding="textFieldEmail">
+          <component id="c53bf" class="javax.swing.JTextField" binding="textFieldEmail">
             <constraints>
               <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -82,7 +82,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="a23aa" class="javax.swing.JLabel">
+          <component id="b64fb" class="javax.swing.JLabel">
             <constraints>
               <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -90,7 +90,7 @@
               <text value="Tel"/>
             </properties>
           </component>
-          <component id="56bb3" class="javax.swing.JTextField" binding="textFieldPhoneNumber">
+          <component id="26b77" class="javax.swing.JTextField" binding="textFieldPhoneNumber">
             <constraints>
               <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -98,7 +98,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="dce0f" class="javax.swing.JTextField" binding="textFieldPesel">
+          <component id="4920a" class="javax.swing.JTextField" binding="textFieldPesel">
             <constraints>
               <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -106,16 +106,16 @@
             </constraints>
             <properties/>
           </component>
-          <component id="c0bab" class="javax.swing.JLabel">
+          <component id="67240" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="18"/>
-              <text value="Wprowadź dane Sprzedawcy"/>
+              <text value="Wprowadź dane Administratora"/>
             </properties>
           </component>
-          <component id="92175" class="javax.swing.JLabel">
+          <component id="6516b" class="javax.swing.JLabel">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -123,23 +123,23 @@
               <text value="Imie"/>
             </properties>
           </component>
-          <component id="3d5e" class="javax.swing.JButton" binding="buttonConfirm">
+          <component id="ddf07" class="javax.swing.JButton" binding="buttonConfirm">
             <constraints>
-              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Zatwierdź"/>
             </properties>
           </component>
-          <component id="b1f3" class="javax.swing.JButton" binding="buttonCancel">
+          <component id="dad07" class="javax.swing.JButton" binding="buttonCancel">
             <constraints>
-              <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Wróć"/>
             </properties>
           </component>
-          <component id="7ba09" class="javax.swing.JLabel">
+          <component id="1b5dd" class="javax.swing.JLabel">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -147,27 +147,13 @@
               <text value="Hasło"/>
             </properties>
           </component>
-          <component id="4027a" class="javax.swing.JPasswordField" binding="passwordField">
+          <component id="398a5" class="javax.swing.JPasswordField" binding="passwordField">
             <constraints>
               <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
             <properties/>
-          </component>
-          <component id="1f294" class="javax.swing.JComboBox" binding="comboBoxRental">
-            <constraints>
-              <grid row="8" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="831e2" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Wypożyczalnia"/>
-            </properties>
           </component>
         </children>
       </grid>

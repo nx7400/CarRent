@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.DealerMenu">
-  <grid id="27dc6" binding="panel1" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel1" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
@@ -10,41 +10,133 @@
     <children>
       <component id="2f0cc" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="159" height="110"/>
+          </grid>
         </constraints>
         <properties>
+          <font size="20"/>
           <text value="Menu Sprzedawcy"/>
         </properties>
       </component>
-      <vspacer id="6bd4c">
+      <tabbedpane id="58092" binding="tabbedPane1" default-binding="true">
         <constraints>
-          <grid row="1" column="1" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="1bcc0" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Sprzedaż"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="fff" class="javax.swing.JButton" binding="buttonAddCustomer">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Dodaj Klienta "/>
+                </properties>
+              </component>
+              <component id="d78f8" class="javax.swing.JButton" binding="buttonAddVehicleToCustomer">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Dodaj Pojazd do Klienta"/>
+                </properties>
+              </component>
+              <component id="d4de9" class="javax.swing.JButton" binding="buttonAddVehicleToExsistingInvoice">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Dodaj samochód do istniejącej faktury"/>
+                </properties>
+              </component>
+              <component id="929ba" class="javax.swing.JButton" binding="buttonShowInvoice">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Pokaż fakture"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="ad4be" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Przeglądanie zasobów"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="dde2e" class="javax.swing.JButton" binding="buttonShowCustomers">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Przeglądaj liste klientow"/>
+                </properties>
+              </component>
+              <component id="f8283" class="javax.swing.JButton" binding="buttonShowDealers">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Przeglądaj liste sprzedawcow "/>
+                </properties>
+              </component>
+              <component id="d9907" class="javax.swing.JButton" binding="buttonShowMechanics">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Przeglądaj liste mechanikow "/>
+                </properties>
+              </component>
+              <component id="622b5" class="javax.swing.JButton" binding="buttonShowRentals">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Przegladaj liste wypożyczalni"/>
+                </properties>
+              </component>
+              <component id="ff549" class="javax.swing.JButton" binding="buttonShowWorkShops">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Przeglądaj liste warsztatów"/>
+                </properties>
+              </component>
+              <component id="88bba" class="javax.swing.JButton" binding="buttonShowVehicle">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Przeglądaj liste samochodów"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+      <vspacer id="38764">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="2" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <preferred-size width="11" height="110"/>
+          </grid>
         </constraints>
       </vspacer>
-      <component id="fff" class="javax.swing.JButton" binding="buttonAddCustomer">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Dodaj Klienta "/>
-        </properties>
-      </component>
-      <component id="d78f8" class="javax.swing.JButton" binding="buttonAddVehicleToCustomer">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Dodaj Pojazd do Klienta"/>
-        </properties>
-      </component>
-      <component id="d4de9" class="javax.swing.JButton" binding="buttonPrintInvoice">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Drukuj Fakture"/>
-        </properties>
-      </component>
     </children>
   </grid>
 </form>

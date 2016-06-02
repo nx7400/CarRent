@@ -31,6 +31,10 @@ public class MenuForm extends JFrame implements ActionListener{
     private JButton buttonShowRentals;
     private JButton buttonShowWorkShops;
     private JButton buttonShowVehicle;
+    private JButton buttonAddAdmin;
+    private JButton buttonShowAdmins;
+    private JButton buttonRemoveInvoice;
+    private JButton buttonRemoveAdmin;
     private JButton buttonShowVehicles;
 
 
@@ -44,6 +48,7 @@ public class MenuForm extends JFrame implements ActionListener{
 
         setContentPane(panel1);
 
+        buttonAddAdmin.addActionListener(this);
         buttonAddCustomer.addActionListener(this);
         buttonAddDealer.addActionListener(this);
         buttonAddMechanic.addActionListener(this);
@@ -51,12 +56,16 @@ public class MenuForm extends JFrame implements ActionListener{
         buttonAddRental.addActionListener(this);
         buttonAddVehicle.addActionListener(this);
 
+        buttonRemoveCustomer.addActionListener(this);
         buttonRemoveDealer.addActionListener(this);
         buttonRemoveMechanic.addActionListener(this);
         buttonRemoveVehicle.addActionListener(this);
         buttonRemoveWorkShop.addActionListener(this);
         buttonRemoveRental.addActionListener(this);
+        buttonRemoveInvoice.addActionListener(this);
+        buttonRemoveAdmin.addActionListener(this);
 
+        buttonShowAdmins.addActionListener(this);
         buttonShowCustomers.addActionListener(this);
         buttonShowDealers.addActionListener(this);
         buttonShowMechanics.addActionListener(this);
@@ -73,6 +82,10 @@ public class MenuForm extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
+
+        if(source == buttonAddAdmin){
+            AddAdminForm addAdmin = new AddAdminForm();
+        }
 
         if(source == buttonAddCustomer) {
             AddCustomerForm addCustomer = new AddCustomerForm();
@@ -98,6 +111,10 @@ public class MenuForm extends JFrame implements ActionListener{
             AddVehicleForm addVehicle = new AddVehicleForm();
         }
 
+        if(source == buttonRemoveCustomer){
+            RemoveCustomerForm removeCustomer = new RemoveCustomerForm();
+        }
+
         if(source == buttonRemoveDealer){
             RemoveDealerForm2 removeDealer = new RemoveDealerForm2();
         }
@@ -120,9 +137,23 @@ public class MenuForm extends JFrame implements ActionListener{
             RemoveRentalForm removeRental = new RemoveRentalForm();
         }
 
+        if(source == buttonRemoveInvoice){
+
+            RemoveInvoiceForm removeInvoice = new RemoveInvoiceForm();
+        }
+
+        if(source == buttonRemoveAdmin){
+
+            RemoveAdminForm removeAdmie = new RemoveAdminForm();
+        }
+
         if(source == buttonChangeToDealer){
 
             DealerMenu dealerMenu = new DealerMenu();
+        }
+
+        if(source == buttonShowAdmins){
+            ShowAdminsForm showAdmins = new ShowAdminsForm();
         }
 
         if(source == buttonShowCustomers){

@@ -3,6 +3,7 @@ package Controler;
 
 import Model.Car;
 import Model.DataBase;
+import Model.Invoice;
 import Model.Vehicle;
 
 import java.util.List;
@@ -26,6 +27,16 @@ public class VehicleControler {
     public List<Vehicle> getVehiclesFromDataBase(){
 
        return B.selectVehicle();
+    }
+
+    public boolean removeVehicleFromDataBase(int IdVehicleToRemove){
+
+        for(Integer I: B.checkInvoice_Vehicle()){
+            if(I==IdVehicleToRemove)
+                return false;
+        }
+
+        return B.removeVehicle(IdVehicleToRemove);
     }
 
     public Vehicle getVehicleById(int idSelected){

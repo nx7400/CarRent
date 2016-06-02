@@ -1,10 +1,9 @@
 package View;
 
-
 import Controler.InvoiceControler;
-import Controler.PersonControler;
 import Controler.VehicleControler;
-import Model.*;
+import Model.Invoice;
+import Model.Vehicle;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -14,27 +13,27 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by Michał on 18.03.2016.
+ * Created by Michał on 02.06.2016.
  */
-public class AddVehicleToCustomer extends JFrame implements ActionListener {
-    private JComboBox comboBoxVehicle;
+public class AddCarToExsitingInvoice extends JFrame implements ActionListener {
     private JPanel panel1;
-    private JComboBox comboBoxCustomer;
-    private JTextField textFieldNumberOfDays;
-    private JButton buttonAdd;
     private JButton cancelButton;
+    private JComboBox comboBoxInvoice;
+    private JTextField textFieldNumberOfDays;
+    private JComboBox comboBoxVehicle;
+    private JButton buttonAdd;
     private JFrame statusDialogWindow;
     private JFrame dialogWindow;
     private JFrame wrongIdDialogWindow;
 
-    private int idCustomerSelected = -1;
+    private int idInvoiceSelected = -1;
     private int idVehicleSelected = -1;
 
-    PersonControler pc = new PersonControler();
+    InvoiceControler ic = new InvoiceControler();
     VehicleControler vc = new VehicleControler();
 
-    public AddVehicleToCustomer() {
-        super("Dodaj pojazd do Klienta");
+    public AddCarToExsitingInvoice() {
+        super("Dodaj pojazd do faktury");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
         setSize(640,480);
@@ -42,20 +41,20 @@ public class AddVehicleToCustomer extends JFrame implements ActionListener {
         setContentPane(panel1);
 
         comboBoxVehicle.addActionListener(this);
-        comboBoxCustomer.addActionListener(this);
+        comboBoxInvoice.addActionListener(this);
         buttonAdd.addActionListener(this);
         cancelButton.addActionListener(this);
 
-        addCustomersToComboBox(pc.getCustomersFromDataBase());
+        addInvoiceToComboBox(ic.getInvoiceFromDataBase());
         addVehicleToComboBox(vc.getVehiclesFromDataBase());
 
 
     }
 
-    private void addCustomersToComboBox(List<Customer> customersList ){
+    private void addInvoiceToComboBox(List<Invoice> invoiceList ){
 
-        for(Customer C : customersList)
-            comboBoxCustomer.addItem(C.toString());
+        for(Invoice In : invoiceList)
+            comboBoxInvoice.addItem(In.toString());
 
     }
 
@@ -81,9 +80,9 @@ public class AddVehicleToCustomer extends JFrame implements ActionListener {
 
             if(rentTimeMatcher.matches()){
                 Integer numberOfDays = Integer.parseInt(rentTime);
-                int newInvoiceId = ic.addVehicleAndCusomerToNewInvoice(vc.getVehicleById(idVehicleSelected), pc.getCustomerById(idCustomerSelected), numberOfDays);
+                ic.addVehicleAndCusomerToExistingInvoice(ic.getInvoiceById(idInvoiceSelected), vc.getVehicleById(idVehicleSelected), numberOfDays);
 
-                JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie samochodu do klienta na fakturze o id: "+newInvoiceId);
+                JOptionPane.showMessageDialog(statusDialogWindow,"Udane dodanie samochodu do faktury");
 
             } else {
                 JOptionPane.showMessageDialog(statusDialogWindow, "Błędna wartość dni wypożyczenia !!! Podaj liczbe dni ","Błędna wartość", JOptionPane.ERROR_MESSAGE);
@@ -98,9 +97,9 @@ public class AddVehicleToCustomer extends JFrame implements ActionListener {
             dispose();
         }
 
-        if(source == comboBoxCustomer){
+        if(source == comboBoxInvoice){
 
-            idCustomerSelected = comboBoxCustomer.getSelectedIndex() + 1;
+            idInvoiceSelected = comboBoxInvoice.getSelectedIndex() + 1;
         }
 
         if(source == comboBoxVehicle){
@@ -109,5 +108,7 @@ public class AddVehicleToCustomer extends JFrame implements ActionListener {
         }
 
     }
+
+
 }
 

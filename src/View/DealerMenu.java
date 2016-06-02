@@ -12,8 +12,16 @@ import java.awt.event.ActionListener;
 public class DealerMenu extends JFrame implements ActionListener {
     private JButton buttonAddCustomer;
     private JButton buttonAddVehicleToCustomer;
-    private JButton buttonPrintInvoice;
+    private JButton buttonAddVehicleToExsistingInvoice;
     private JPanel panel1;
+    private JButton buttonShowInvoice;
+    private JTabbedPane tabbedPane1;
+    private JButton buttonShowCustomers;
+    private JButton buttonShowDealers;
+    private JButton buttonShowMechanics;
+    private JButton buttonShowRentals;
+    private JButton buttonShowWorkShops;
+    private JButton buttonShowVehicle;
 
     public DealerMenu(){
 
@@ -27,6 +35,15 @@ public class DealerMenu extends JFrame implements ActionListener {
 
         buttonAddCustomer.addActionListener(this);
         buttonAddVehicleToCustomer.addActionListener(this);
+        buttonAddVehicleToExsistingInvoice.addActionListener(this);
+        buttonShowInvoice.addActionListener(this);
+
+        buttonShowCustomers.addActionListener(this);
+        buttonShowDealers.addActionListener(this);
+        buttonShowMechanics.addActionListener(this);
+        buttonShowRentals.addActionListener(this);
+        buttonShowWorkShops.addActionListener(this);
+        buttonShowVehicle.addActionListener(this);
 
     }
 
@@ -42,9 +59,42 @@ public class DealerMenu extends JFrame implements ActionListener {
         }
 
         if(source == buttonAddVehicleToCustomer){
-            Customer C = new Customer();
-            AddVehicleToCustomer addVehicleToCustomer = new AddVehicleToCustomer(C);
+            AddVehicleToCustomer addVehicleToCustomer = new AddVehicleToCustomer();
         }
+
+        if(source == buttonAddVehicleToExsistingInvoice){
+
+            AddCarToExsitingInvoice addCarToExsitingInvoice = new AddCarToExsitingInvoice();
+        }
+
+        if(source == buttonShowInvoice){
+            ShowInvoiceForm showInvoice = new ShowInvoiceForm();
+        }
+
+        if(source == buttonShowCustomers){
+            ShowCustomersForm showCustomers = new ShowCustomersForm();
+        }
+
+        if(source == buttonShowDealers){
+            ShowDealersForm showDealers = new ShowDealersForm();
+        }
+
+        if(source == buttonShowMechanics){
+            ShowMechanicsForm showMechanics = new ShowMechanicsForm();
+        }
+
+        if(source == buttonShowRentals){
+            ShowRentalsForm showRentals = new ShowRentalsForm();
+        }
+
+        if(source == buttonShowWorkShops){
+            ShowWorkShopsForm showWorkShops = new ShowWorkShopsForm();
+        }
+
+        if(source == buttonShowVehicle){
+            ShowVehicleForm showVehicle = new ShowVehicleForm();
+        }
+
 
     }
 }
